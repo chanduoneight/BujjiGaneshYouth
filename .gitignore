@@ -14,12 +14,29 @@ dist-ssr
 .vinxi
 .tanstack/**
 .nitro
-*.local
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+credentials.json
+service-account*.json
+auth-secrets*.json
 
 # Wrangler / Cloudflare / Vercel
 .wrangler/
 .vercel/
 .dev.vars
+*.local
 
 # Editor directories and files
 .vscode/*
