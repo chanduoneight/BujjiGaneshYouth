@@ -1,0 +1,9 @@
+﻿// Simplified Sheet using Dialog as base
+export {
+  Dialog as Sheet,
+  DialogTrigger as SheetTrigger,
+  DialogContent as SheetContent,
+  DialogHeader as SheetHeader,
+  DialogTitle as SheetTitle,
+  DialogDescription as SheetDescription,
+} from "./dialog"

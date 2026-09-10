@@ -1,0 +1,289 @@
+import photo1 from "@/assets/VAKA CH&U.png";
+import photo2 from "@/assets/Parisa Srinu.png";
+import photo3 from "@/assets/Gantasala sai.png";
+import photo4 from "@/assets/Palagani Yogeshwar.png";
+import photo5 from "@/assets/Yarlagadda Sudheer.png";
+import photo6 from "@/assets/LANKOTHU RAVI TEJA.png";
+import photo7 from "@/assets/Penumaka Manoj.png";
+import photo8 from "@/assets/Naragani madhu sai ram.png";
+import photo9 from "@/assets/Gantasala ganesh.png";
+import photo10 from "@/assets/Nutakki Mahesh.png";
+import photo11 from "@/assets/Kolluru SaiMani.png";
+import photo12 from "@/assets/Kolluru venkata siva.png";
+import photo13 from "@/assets/Parisa gopi.png";
+import photo14 from "@/assets/Relangi Harsha vardhan sai.png";
+import photo15 from "@/assets/thulluru ravi vardhan.png";
+import photo16 from "@/assets/LANKOTHU VAMSI.png";
+import photo17 from "@/assets/Vuyyru yaswanth.png";
+import photo18 from "@/assets/Palagani chakrapani.png";
+import photo19 from "@/assets/Vuyyuru rakesh.png";
+import photo20 from "@/assets/Parisa SUMANTH.png";
+import photo21 from "@/assets/Penumaka lokesh.png";
+
+export interface CommitteeMember {
+  id: number;
+  name: string;
+  nameTe: string;
+  firstName: string; // uppercase, for massive background text
+  lastName: string; // uppercase, for massive background text
+  role: string;
+  roleTe: string;
+  photo: string;
+  bio?: string;
+  bioTe?: string;
+}
+
+export const committeeMembers: CommitteeMember[] = [
+  {
+    id: 1,
+    name: "Rakesh Vuyyuru",
+    nameTe: "రాకేష్ వుయ్యూరు",
+    firstName: "RAKESH",
+    lastName: "VUYYURU",
+    role: "President",
+    roleTe: "అధ్యక్షుడు",
+    photo: photo19,
+    bio: "President guiding SRP Committee Kurrollu celebrations and community.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళ ఉత్సవాలు మరియు సమాజాన్ని నడిపిస్తున్న అధ్యక్షుడు.",
+  },
+  {
+    id: 2,
+    name: "Ravi Teja Lankothu",
+    nameTe: "రవి తేజ లంకోతు",
+    firstName: "RAVI TEJA",
+    lastName: "LANKOTHU",
+    role: "President",
+    roleTe: "అధ్యక్షుడు",
+    photo: photo6,
+    bio: "President leading SRP Committee Kurrollu with dedication and passion.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళను అంకితభావంతో నడిపిస్తున్న అధ్యక్షుడు.",
+  },
+  {
+    id: 3,
+    name: "Sumanth Parisa",
+    nameTe: "సుమంత్ పరిశ",
+    firstName: "SUMANTH",
+    lastName: "PARISA",
+    role: "President",
+    roleTe: "అధ్యక్షుడు",
+    photo: photo20,
+    bio: "President leading SRP Committee Kurrollu with devotion and energy.",
+    bioTe: "భక్తితో మరియు ఉత్సాహంతో ఎస్ఆర్పి కమిటీ కుర్రోళ్ళను నడిపిస్తున్న అధ్యక్షుడు.",
+  },
+  {
+    id: 4,
+    name: "Srinu Parisa",
+    nameTe: "శ్రీను పరిశ",
+    firstName: "SRINU",
+    lastName: "PARISA",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo2,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 5,
+    name: "Sai Gantasala",
+    nameTe: "సాయి గంటసాల",
+    firstName: "SAI",
+    lastName: "GANTASALA",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo3,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 6,
+    name: "Yogeshwar Palagani",
+    nameTe: "యోగేశ్వర్ పలగాని",
+    firstName: "YOGESHWAR",
+    lastName: "PALAGANI",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo4,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 7,
+    name: "Sudheer Yarlagadda",
+    nameTe: "సుధీర్ యర్లగడ్డ",
+    firstName: "SUDHEER",
+    lastName: "YARLAGADDA",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo5,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 8,
+    name: "Manoj Penumaka",
+    nameTe: "మనోజ్ పెనుమాక",
+    firstName: "MANOJ",
+    lastName: "PENUMAKA",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo7,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 9,
+    name: "Madhu Sai Ram Naragani",
+    nameTe: "మధు సాయిరామ్ నరగణి",
+    firstName: "MADHU SAI RAM",
+    lastName: "NARAGANI",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo8,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 10,
+    name: "Ganesh Gantasala",
+    nameTe: "గణేష్ గంటసాల",
+    firstName: "GANESH",
+    lastName: "GANTASALA",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo9,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 11,
+    name: "Mahesh Nutakki",
+    nameTe: "మహేష్ నూతక్కి",
+    firstName: "MAHESH",
+    lastName: "NUTAKKI",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo10,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 12,
+    name: "Sai Mani Kolluru",
+    nameTe: "సాయి మణి కొల్లూరు",
+    firstName: "SAI MANI",
+    lastName: "KOLLURU",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo11,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 13,
+    name: "Venkata Siva Kolluru",
+    nameTe: "వెంకట శివ కొల్లూరు",
+    firstName: "VENKATA SIVA",
+    lastName: "KOLLURU",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo12,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 14,
+    name: "Gopi Parisa",
+    nameTe: "గోపి పరిశ",
+    firstName: "GOPI",
+    lastName: "PARISA",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo13,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 15,
+    name: "Harsha Vardhan Sai Relangi",
+    nameTe: "హర్ష వర్ధన్ సాయి రెలంగి",
+    firstName: "HARSHA VARDHAN",
+    lastName: "RELANGI",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo14,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 16,
+    name: "Ravi Vardhan Thulluru",
+    nameTe: "రవి వర్ధన్ తుల్లూరు",
+    firstName: "RAVI VARDHAN",
+    lastName: "THULLURU",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo15,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 17,
+    name: "Vamsi Lankothu",
+    nameTe: "వంశీ లంకోతు",
+    firstName: "VAMSI",
+    lastName: "LANKOTHU",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo16,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 18,
+    name: "Yaswanth Vuyyuru",
+    nameTe: "యశ్వంత్ వుయ్యూరు",
+    firstName: "YASWANTH",
+    lastName: "VUYYURU",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo17,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 19,
+    name: "Chakrapani Palagani",
+    nameTe: "చక్రపాణి పలగాని",
+    firstName: "CHAKRAPANI",
+    lastName: "PALAGANI",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo18,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 20,
+    name: "Lokesh Penumaka",
+    nameTe: "లోకేష్ పెనుమాక",
+    firstName: "LOKESH",
+    lastName: "PENUMAKA",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo21,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 21,
+    name: "Chandu Vaka",
+    nameTe: "చందు వాకా",
+    firstName: "CHANDU",
+    lastName: "VAKA",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo1,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "ఎస్ఆర్పి కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+];

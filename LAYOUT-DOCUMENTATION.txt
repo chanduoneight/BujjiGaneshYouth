@@ -1,0 +1,513 @@
+================================================================
+   WEBSITE LAYOUT & SECTIONS - COMPLETE DOCUMENTATION
+================================================================
+
+PROJECT: Bujji Ganesh Youth Festival Website
+LOCATION: d:\BujjiGaneshYouth\pixel-perfect-showcase-7578-main\
+
+================================================================
+OVERALL SITE LAYOUT STRUCTURE
+================================================================
+
+Every page uses this wrapper (SiteLayout):
+
+┌─────────────────────────────────────────────────┐
+│  1. ANNOUNCEMENT BAR (Top banner)               │
+├─────────────────────────────────────────────────┤
+│  2. NAVBAR (Desktop navigation)                 │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  3. MAIN CONTENT (Page-specific)                │
+│     - Coin Flip Animation (on first load)      │
+│     - Page sections (see below)                 │
+│                                                 │
+├─────────────────────────────────────────────────┤
+│  4. FOOTER (Site footer with links)             │
+├─────────────────────────────────────────────────┤
+│  5. BOTTOM NAV (Mobile navigation bar)          │
+└─────────────────────────────────────────────────┘
+
+================================================================
+1. ANNOUNCEMENT BAR
+================================================================
+
+Component: src/components/site/AnnouncementBar.tsx
+Position: Very top of every page
+Purpose: Show important announcements/notices
+
+Content:
+- Scrolling/marquee announcement text
+- Important festival updates
+- Visible on all pages
+
+================================================================
+2. NAVBAR (DESKTOP NAVIGATION)
+================================================================
+
+Component: src/components/site/Navbar.tsx
+Position: Below announcement bar
+Visibility: Desktop and tablet
+
+Structure:
+┌─────────────────────────────────────────────────┐
+│  LOGO/TITLE     HOME ABOUT EVENTS...    [LANG]  │
+└─────────────────────────────────────────────────┘
+
+Contains:
+- Committee logo/title (left)
+- Navigation links (center):
+  • Home
+  • About
+  • Schedule
+  • Events
+  • Gallery
+  • Committee
+  • Announcements
+  • Contact
+- Language toggle button (right): English ⟷ Telugu
+- Mobile: Hamburger menu
+
+================================================================
+3. MAIN CONTENT - HOMEPAGE SECTIONS
+================================================================
+
+File: src/routes/index.tsx
+
+┌─────────────────────────────────────────────────┐
+│                                                 │
+│  A. COIN FLIP ANIMATION (First 3 seconds)       │
+│                                                 │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  B. HERO SECTION                                │
+│                                                 │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  C. GANESHA IMAGE SECTION                       │
+│                                                 │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  D. FESTIVAL INFO SECTION                       │
+│                                                 │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  E. BAPPA MORYA SECTION                         │
+│                                                 │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  F. QUICK LINKS SECTION                         │
+│                                                 │
+└─────────────────────────────────────────────────┘
+
+-----------------------------------------------------------
+SECTION A: COIN FLIP ANIMATION
+-----------------------------------------------------------
+
+Component: src/components/site/CoinFlipLoader.tsx
+Duration: 3 seconds
+Display: Full screen overlay
+
+Visual Elements:
+┌─────────────────────────────────────────────┐
+│                                             │
+│         [Maroon Gradient Background]        │
+│                                             │
+│              ╔════════════╗                 │
+│              ║   LOGO     ║                 │
+│              ║  SPINNING  ║ ← 3D Rotation   │
+│              ║  IN 3D     ║   Golden Glow   │
+│              ╚════════════╝                 │
+│                                             │
+└─────────────────────────────────────────────┘
+
+Content:
+- Your Bujji Ganesh Youth logo
+- 3D coin flip rotation (10 spins)
+- Golden glow effect around coin
+- Maroon gradient background
+- Auto-disappears after 3 seconds
+
+-----------------------------------------------------------
+SECTION B: HERO SECTION
+-----------------------------------------------------------
+
+Background: Maroon gradient with mandala pattern
+Text Color: White/Cream
+Layout: Centered
+
+Content Structure:
+┌─────────────────────────────────────────────┐
+│                                             │
+│         श्री गणेशाय नमः                     │
+│         (Sacred Mantra - Gold)              │
+│                                             │
+│         BUJJI GANESH YOUTH                  │
+│         (Large heading)                     │
+│                                             │
+│         SRP COMMITTEE KURROLLU              │
+│         (Subheading - Gold)                 │
+│                                             │
+│    Welcome to Our Ganesh Chaturthi          │
+│         Celebrations                        │
+│         (Main message)                      │
+│                                             │
+│    Celebrating devotion, friendship...      │
+│         (Support text)                      │
+│                                             │
+│  [View Schedule]  [Explore Gallery]         │
+│  (Two CTA buttons)                          │
+│                                             │
+│  ═══════════════════════════════            │
+│  (Ornament strip at bottom)                 │
+└─────────────────────────────────────────────┘
+
+Elements:
+1. Sacred mantra in gold
+2. Committee title (Bujji Ganesh Youth)
+3. Committee name (SRP Committee Kurrollu)
+4. Welcome headline
+5. Support text
+6. Two CTA buttons:
+   - "View Festival Schedule" (saffron gradient)
+   - "Explore Gallery" (cream background)
+7. Decorative ornament strip
+
+-----------------------------------------------------------
+SECTION C: GANESHA IMAGE SECTION
+-----------------------------------------------------------
+
+Background: Light cream
+Layout: Centered, max-width container
+
+Content:
+┌─────────────────────────────────────────────┐
+│                                             │
+│        ┌─────────────────────┐              │
+│        │                     │              │
+│        │   LORD GANESHA      │              │
+│        │   HERO IMAGE        │              │
+│        │                     │              │
+│        └─────────────────────┘              │
+│        (Card with shadow)                   │
+│                                             │
+└─────────────────────────────────────────────┘
+
+Elements:
+- Large Lord Ganesha image
+- Card container with shadow
+- Rounded corners
+- Full width within container
+
+Image: src/assets/ganesha-hero.jpg
+
+-----------------------------------------------------------
+SECTION D: FESTIVAL INFO SECTION
+-----------------------------------------------------------
+
+Background: Cream
+Layout: Centered content with grid
+
+Content Structure:
+┌─────────────────────────────────────────────┐
+│                                             │
+│         Ganesh Chaturthi 2026               │
+│         (Large heading)                     │
+│         ══════════                          │
+│         (Ornament strip)                    │
+│                                             │
+│    Ten days of devotion, culture and        │
+│    community organised by the young         │
+│    volunteers of our village.               │
+│                                             │
+│  ┌───────┐  ┌───────┐  ┌───────┐           │
+│  │  10   │  │  🎭   │  │  🎉   │           │
+│  │ Days  │  │Cultur │  │Commun │           │
+│  │  of   │  │  al   │  │ ity   │           │
+│  │Celebr │  │Progra │  │Events │           │
+│  │ation  │  │  ms   │  │       │           │
+│  └───────┘  └───────┘  └───────┘           │
+│  (3 stat cards)                             │
+│                                             │
+└─────────────────────────────────────────────┘
+
+Elements:
+1. Festival name + year heading
+2. Decorative ornament strip
+3. Description text
+4. Three stat cards:
+   - "10 Days of Celebration"
+   - "Cultural Programs" (🎭)
+   - "Community Events" (🎉)
+
+-----------------------------------------------------------
+SECTION E: BAPPA MORYA SECTION
+-----------------------------------------------------------
+
+Background: Maroon gradient
+Text Color: White/Cream
+Layout: Full-width, centered
+
+Content:
+┌─────────────────────────────────────────────┐
+│                                             │
+│      Ganpati Bappa Morya 🙏                 │
+│      (Large display text)                   │
+│                                             │
+└─────────────────────────────────────────────┘
+
+Elements:
+- Sacred blessing text
+- Large, display font
+- Prayer hands emoji
+- Bilingual (English/Telugu)
+
+-----------------------------------------------------------
+SECTION F: QUICK LINKS SECTION
+-----------------------------------------------------------
+
+Background: White/Light
+Layout: Grid of 4 cards
+
+Content Structure:
+┌─────────────────────────────────────────────┐
+│                                             │
+│            Quick Links                      │
+│            (Heading)                        │
+│                                             │
+│  ┌────────┐ ┌────────┐ ┌────────┐ ┌───────┐│
+│  │   📅   │ │   🎪   │ │   📸   │ │  📞   ││
+│  │Schedule│ │ Events │ │Gallery │ │Contact││
+│  │ View   │ │ Browse │ │Festival│ │  Get  ││
+│  │festival│ │  all   │ │ photos │ │  in   ││
+│  │schedule│ │ events │ │        │ │ touch ││
+│  └────────┘ └────────┘ └────────┘ └───────┘│
+│  (4 clickable cards)                        │
+│                                             │
+└─────────────────────────────────────────────┘
+
+Elements:
+- 4 navigation cards in grid:
+  1. Schedule (📅) → /schedule
+  2. Events (🎪) → /events
+  3. Gallery (📸) → /gallery
+  4. Contact (📞) → /contact
+
+Each card has:
+- Large emoji icon
+- Bold title
+- Description text
+- Hover effect (shadow lift)
+- Click to navigate
+
+Card Style:
+- White background
+- Shadow on hover
+- Rounded corners
+- Centered content
+
+================================================================
+4. FOOTER
+================================================================
+
+Component: src/components/site/Footer.tsx
+Position: Bottom of every page (above mobile nav)
+Background: Dark
+
+Expected Content:
+- Committee information
+- Quick links
+- Social media links
+- Copyright notice
+- "Made with ❤️ for our village"
+
+================================================================
+5. BOTTOM NAV (MOBILE ONLY)
+================================================================
+
+Component: src/components/site/BottomNav.tsx
+Position: Fixed at bottom on mobile devices
+Visibility: Mobile only (hidden on desktop)
+
+Structure:
+┌─────────────────────────────────────────────┐
+│  [🏠]    [📅]    [🎪]    [📸]    [≡]       │
+│  Home  Schedule Events Gallery  More        │
+└─────────────────────────────────────────────┘
+
+Contains:
+- 5 icon buttons for main navigation
+- Fixed position at bottom
+- Only visible on mobile/small screens
+
+================================================================
+REUSABLE COMPONENTS AVAILABLE
+================================================================
+
+These components exist and can be used on other pages:
+
+1. PageHero (SiteLayout.tsx)
+   - Standard header for internal pages
+   - Maroon gradient background
+   - Title, subtitle, kicker text
+   - Ornament strip at bottom
+
+2. SectionHeading (SectionHeading.tsx)
+   - Eyebrow text (small label)
+   - Main heading
+   - Ornament strip divider
+   - Subtitle text
+   - Aligned center or left
+
+3. Countdown (Countdown.tsx)
+   - Days, hours, minutes, seconds
+   - Counts down to festival start
+
+4. EventCard (EventCard.tsx)
+   - Event image
+   - Title, date, time
+   - Location, description
+   - "View Details" button
+
+5. MemberCard (MemberCard.tsx)
+   - Member photo
+   - Name, role
+   - Description
+   - Call/WhatsApp buttons
+
+6. GalleryGrid (GalleryGrid.tsx)
+   - Photo grid layout
+   - Responsive columns
+   - Click to enlarge
+
+7. ProgramTimeline (ProgramTimeline.tsx)
+   - Daily schedule display
+   - Time-based layout
+   - Morning/afternoon/evening/night
+
+8. AnnouncementCard (AnnouncementCard.tsx)
+   - Title, date, category
+   - Description
+   - Important badge
+
+9. CommitteeBanner (CommitteeBanner.tsx)
+   - Committee branding
+   - Hero-style display
+
+================================================================
+DESIGN SYSTEM - COLOR SCHEME
+================================================================
+
+Primary Colors:
+- Saffron: #FF9933 (oklch(0.72 0.17 62))
+- Maroon: #6B1F1F (oklch(0.34 0.11 27))
+- Gold: #F4C430 (oklch(0.79 0.12 84))
+- Cream: #FFFAF0 (oklch(0.975 0.02 86))
+
+Usage:
+- gradient-maroon: Headers, hero sections
+- gradient-saffron: CTA buttons, highlights
+- surface-card: White cards with gold border
+- text-maroon: Headings
+- text-gold: Accents, sacred text
+
+================================================================
+DESIGN SYSTEM - UTILITIES
+================================================================
+
+Backgrounds:
+- gradient-maroon: Maroon gradient with mandala
+- gradient-saffron: Saffron gradient
+- mandala-bg: Decorative background pattern
+- glow-halo: Animated glow effect
+
+Borders/Decorations:
+- ornament-strip: Traditional ornamental line
+- surface-card: Card with shadow and border
+
+Shadows:
+- shadow-soft: Subtle shadow for cards
+- shadow-lift: Hover shadow (elevated)
+- shadow-gold: Golden glow shadow
+
+Animations:
+- animate-rise: Fade in from bottom
+- animate-halo: Pulsing glow effect
+- animate-marquee: Scrolling text
+
+Typography:
+- font-display: Marcellus (headings)
+- font-sans: Mukta (body text)
+
+================================================================
+RESPONSIVE BREAKPOINTS
+================================================================
+
+Mobile: < 640px (sm)
+Tablet: 640px - 1024px (sm to lg)
+Desktop: > 1024px (lg+)
+
+Layout Changes:
+- Mobile: Single column, bottom nav visible
+- Tablet: 2 columns for cards, navbar visible
+- Desktop: 3-4 columns, full navbar
+
+================================================================
+BILINGUAL SYSTEM
+================================================================
+
+Languages: English (en) & Telugu (te)
+
+Hook: useLang()
+Functions:
+- b(object): Get bilingual text from data
+  Example: b(festival.festivalName)
+
+- t(key): Get UI string from dictionary
+  Example: t("home"), t("schedule")
+
+- lang: Current language ("en" or "te")
+- setLang(lang): Change language
+
+Language Toggle: In navbar (top right)
+
+================================================================
+DATA SOURCES
+================================================================
+
+All content comes from these files:
+
+1. src/data/festival.ts
+   - Festival dates and info
+   - Committee members (8 members)
+   - Responsibilities
+   - Contact information
+
+2. src/data/content.ts
+   - Events (5 events)
+   - Announcements (5 announcements)
+   - Gallery photos (8 photos)
+   - Daily program schedule
+   - Festival highlights
+
+================================================================
+NAVIGATION STRUCTURE
+================================================================
+
+Main Routes:
+- / (Home) ✅ IMPLEMENTED
+- /about ⏳ Not yet
+- /schedule ⏳ Not yet
+- /events ⏳ Not yet
+- /gallery ⏳ Not yet
+- /committee ⏳ Not yet
+- /announcements ⏳ Not yet
+- /contact ⏳ Not yet
+
+All links are in place but pages need to be created.
+
+================================================================
+END OF DOCUMENTATION
+================================================================
+
+Generated: 2026-09-08 19:37:21
+Location: d:\BujjiGaneshYouth\pixel-perfect-showcase-7578-main\
