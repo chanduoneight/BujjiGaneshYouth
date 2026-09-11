@@ -48,32 +48,32 @@ export function PageMusicPlayer({ audioSrc }: { audioSrc: string }) {
     const audio = audioRef.current;
     if (!audio) return;
 
-    // 1. Direct immediate autoplay attempt
+    // 1. Immediate autoplay attempt
     attemptPlay();
 
-    // 2. Multi-vector micro-interaction listeners on window, document, and body
+    // 2. Multi-vector user activation gestures (click, touch, pointerdown, keydown)
     const handleGesture = () => {
-      if (audioRef.current && audioRef.current.paused) {
-        audioRef.current
-          .play()
-          .then(() => setIsPlaying(true))
-          .catch(() => {});
-      }
-      removeListeners();
+      const audio = audioRef.current;
+      if (!audio) return;
+
+      audio
+        .play()
+        .then(() => {
+          setIsPlaying(true);
+          removeListeners(); // Only remove listeners once audio actually starts playing!
+        })
+        .catch(() => {
+          // If browser is still waiting for a direct tap, keep listeners active
+        });
     };
 
     const events = [
       "click",
       "touchstart",
       "touchend",
-      "touchmove",
       "pointerdown",
-      "pointermove",
       "mousedown",
-      "scroll",
-      "wheel",
       "keydown",
-      "focus",
     ];
 
     const removeListeners = () => {
@@ -84,8 +84,8 @@ export function PageMusicPlayer({ audioSrc }: { audioSrc: string }) {
     };
 
     events.forEach((evt) => {
-      window.addEventListener(evt, handleGesture, { passive: true, once: true });
-      document.addEventListener(evt, handleGesture, { passive: true, once: true });
+      window.addEventListener(evt, handleGesture, { passive: true });
+      document.addEventListener(evt, handleGesture, { passive: true });
     });
 
     const onPlay = () => setIsPlaying(true);
