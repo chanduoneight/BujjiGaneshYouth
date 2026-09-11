@@ -137,16 +137,18 @@ export function CommitteeSoundtrackVisualizer({
     };
 
     const removeListeners = () => {
-      window.removeEventListener("click", handleFirstInteraction);
-      window.removeEventListener("touchstart", handleFirstInteraction);
-      window.removeEventListener("keydown", handleFirstInteraction);
-      window.removeEventListener("pointerdown", handleFirstInteraction);
+      const evts = ["click", "touchstart", "touchend", "pointerdown", "mousedown", "keydown"];
+      evts.forEach((evt) => {
+        window.removeEventListener(evt, handleFirstInteraction, { capture: true });
+        document.removeEventListener(evt, handleFirstInteraction, { capture: true });
+      });
     };
 
-    window.addEventListener("click", handleFirstInteraction, { passive: true, once: true });
-    window.addEventListener("touchstart", handleFirstInteraction, { passive: true, once: true });
-    window.addEventListener("keydown", handleFirstInteraction, { passive: true, once: true });
-    window.addEventListener("pointerdown", handleFirstInteraction, { passive: true, once: true });
+    const evts = ["click", "touchstart", "touchend", "pointerdown", "mousedown", "keydown"];
+    evts.forEach((evt) => {
+      window.addEventListener(evt, handleFirstInteraction, { capture: true, passive: true });
+      document.addEventListener(evt, handleFirstInteraction, { capture: true, passive: true });
+    });
 
     return () => {
       removeListeners();

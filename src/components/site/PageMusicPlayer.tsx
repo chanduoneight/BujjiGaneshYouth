@@ -1,71 +1,89 @@
 import { useRef, useEffect, useCallback } from "react";
 
-export function PageMusicPlayer({ audioSrc }: { audioSrc?: string }) {
-  const audioRef = useRef<HTMLAudioElement>(null);
+interface PageMusicPlayerProps {
+  audioSrc?: string;
+  volume?: number;
+}
+
+export function PageMusicPlayer({ audioSrc, volume = 0.75 }: PageMusicPlayerProps) {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const attemptPlay = useCallback(() => {
     const audio = audioRef.current;
-    if (!audio) return;
+    if (!audio || !audioSrc) return;
 
-    audio.volume = 0.75;
+    audio.volume = volume;
     const playPromise = audio.play();
     if (playPromise !== undefined) {
       playPromise.catch(() => {
-        // Autoplay restricted until user interaction
+        // Autoplay blocked by browser policy until first user interaction
       });
     }
-  }, []);
+  }, [audioSrc, volume]);
 
   useEffect(() => {
     if (!audioSrc) return;
     const audio = audioRef.current;
     if (!audio) return;
 
-    // 1. Immediate autoplay attempt
+    audio.volume = volume;
+
+    // 1. Try immediate autoplay on mount/navigation
     attemptPlay();
 
-    // 2. Multi-vector user activation gestures (click, touch, pointerdown, keydown, scroll)
+    // 2. Interaction unlock: immediately play upon the very first user interaction anywhere on the page
     const handleGesture = () => {
-      const audio = audioRef.current;
-      if (!audio) return;
+      const el = audioRef.current;
+      if (!el) return;
 
-      audio
-        .play()
-        .then(() => {
-          removeListeners(); // Remove listeners once playback starts
-        })
-        .catch(() => {
-          // If browser is still waiting for direct gesture, keep listeners active
-        });
+      if (el.paused) {
+        el.play()
+          .then(() => {
+            removeListeners();
+          })
+          .catch(() => {
+            // Keep listeners if interaction was not recognized as activation
+          });
+      } else {
+        removeListeners();
+      }
     };
 
-    const events = [
+    const events: (keyof WindowEventMap)[] = [
       "click",
+      "pointerdown",
       "touchstart",
       "touchend",
-      "pointerdown",
       "mousedown",
       "keydown",
-      "scroll",
     ];
 
     const removeListeners = () => {
       events.forEach((evt) => {
-        window.removeEventListener(evt, handleGesture);
-        document.removeEventListener(evt, handleGesture);
+        window.removeEventListener(evt, handleGesture as EventListener, { capture: true });
+        document.removeEventListener(evt, handleGesture as EventListener, { capture: true });
       });
     };
 
     events.forEach((evt) => {
-      window.addEventListener(evt, handleGesture, { passive: true });
-      document.addEventListener(evt, handleGesture, { passive: true });
+      window.addEventListener(evt, handleGesture as EventListener, { capture: true, passive: true });
+      document.addEventListener(evt, handleGesture as EventListener, { capture: true, passive: true });
     });
+
+    const onCanPlay = () => {
+      if (audio.paused) {
+        attemptPlay();
+      }
+    };
+
+    audio.addEventListener("canplay", onCanPlay);
 
     return () => {
       removeListeners();
+      audio.removeEventListener("canplay", onCanPlay);
       audio.pause();
     };
-  }, [audioSrc, attemptPlay]);
+  }, [audioSrc, volume, attemptPlay]);
 
   if (!audioSrc) return null;
 
