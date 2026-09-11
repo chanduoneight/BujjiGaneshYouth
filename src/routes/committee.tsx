@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { committeeMembers } from "@/data/members";
 import { CinematicMemberSlider } from "@/components/committee/CinematicMemberSlider";
+import { CommitteeSoundtrackVisualizer } from "@/components/committee/CommitteeSoundtrackVisualizer";
 import { CommitteeGrid } from "@/components/committee/CommitteeGrid";
-import { PageMusicPlayer } from "@/components/site/PageMusicPlayer";
 import { FestivalParticles } from "@/components/effects/FestivalParticles";
 
 export const Route = createFileRoute("/committee")({
@@ -15,9 +15,6 @@ function CommitteePage() {
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-[#120608]">
-      {/* Committee Section Background Music Player — Karuppu God Mode Entry Song */}
-      <PageMusicPlayer audioSrc="/audio/karuppu-god-mode.mp3" />
-
       <FestivalParticles count={25} />
 
       {/* === PURE CINEMATIC COMMITTEE MEMBER SLIDER === */}
@@ -25,6 +22,13 @@ function CommitteePage() {
         members={committeeMembers}
         currentIndex={sliderIndex}
         onIndexChange={setSliderIndex}
+      />
+
+      {/* === REAL-TIME SOUNDTRACK WAVEFORM VISUALIZER (IN THE GAP) === */}
+      <CommitteeSoundtrackVisualizer
+        audioSrc="/audio/karuppu-god-mode.mp3"
+        trackTitle="Karuppu — God Mode Entry BGM"
+        trackSubtitle="Sai Abhyankar • SRP Committee Official Anthem 2026"
       />
 
       {/* === INTERACTIVE COMMITTEE MEMBERS GRID === */}

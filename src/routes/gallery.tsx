@@ -4,9 +4,7 @@ import { galleryItems, type GalleryItem, type GalleryCategory } from "@/data/gal
 import { useState, useEffect, useCallback } from "react";
 import { ScrollReveal } from "@/components/effects/ScrollReveal";
 import { FestivalParticles } from "@/components/effects/FestivalParticles";
-import { MandalaGlow } from "@/components/effects/MandalaGlow";
-import { CosmicParticles } from "@/components/effects/CosmicParticles";
-import { SacredGeometryOrbs } from "@/components/effects/SacredGeometryOrbs";
+import { DivineOmGlow } from "@/components/effects/DivineOmGlow";
 import { PageMusicPlayer } from "@/components/site/PageMusicPlayer";
 import { ImageIcon, Maximize2, X, ChevronLeft, ChevronRight, Calendar } from "lucide-react";
 
@@ -117,10 +115,7 @@ function Gallery() {
 
       {/* Hero Section */}
       <section className="bg-maroon/90 backdrop-blur-md text-maroon-foreground py-20 relative overflow-hidden border-b border-gold/20">
-        <MandalaGlow direction="normal" duration={50} opacity={0.8} />
-        {/* Cosmic particles rising like offerings */}
-        <CosmicParticles count={120} />
-        <SacredGeometryOrbs count={8} />
+        <DivineOmGlow opacity={0.35} size="lg" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center">
           <p className="text-gold text-2xl font-bold tracking-wider mb-4 drop-shadow-[0_0_15px_rgba(234,179,8,0.7)]">
             {t("namah")}

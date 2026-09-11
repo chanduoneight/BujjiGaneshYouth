@@ -3,9 +3,8 @@ import { useLang } from "@/i18n/language";
 import { festival } from "@/data/festival";
 import { ScrollReveal } from "@/components/effects/ScrollReveal";
 import { FestivalParticles } from "@/components/effects/FestivalParticles";
-import { MandalaGlow } from "@/components/effects/MandalaGlow";
+import { DivineOmGlow } from "@/components/effects/DivineOmGlow";
 import { PageMusicPlayer } from "@/components/site/PageMusicPlayer";
-import { SacredGeometryOrbs } from "@/components/effects/SacredGeometryOrbs";
 import { Sparkles, Heart, Users, Flame, Calendar, Award, Sun } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
@@ -55,9 +54,7 @@ function About() {
 
       {/* Hero Section */}
       <section className="bg-maroon/90 backdrop-blur-md text-maroon-foreground py-20 relative overflow-hidden border-b border-gold/20">
-        <MandalaGlow direction="normal" duration={50} opacity={0.8} />
-        {/* Sacred symbols floating in the divine space */}
-        <SacredGeometryOrbs count={8} />
+        <DivineOmGlow opacity={0.35} size="lg" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/15 border border-gold/30 text-gold text-sm font-semibold mb-4 tracking-wide shadow-sm">
             <Sparkles className="w-4 h-4 animate-spin-slow" />
@@ -330,7 +327,7 @@ function About() {
 
       {/* Bujji Ganesh Youth & SRP Committee Section */}
       <section className="bg-maroon/85 backdrop-blur-md text-maroon-foreground py-16 relative overflow-hidden border-y border-gold/20">
-        <MandalaGlow direction="reverse" duration={60} opacity={0.8} />
+        <DivineOmGlow opacity={0.4} size="md" />
         <div className="relative z-10 mx-auto max-w-4xl px-4">
           <ScrollReveal variant="fade-up">
             <div className="text-center">

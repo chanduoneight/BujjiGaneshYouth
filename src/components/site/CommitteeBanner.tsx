@@ -1,13 +1,13 @@
 import { festival } from "@/data/festival";
 import { useLang } from "@/i18n/language";
-import { MandalaGlow } from "@/components/effects/MandalaGlow";
+import { DivineOmGlow } from "@/components/effects/DivineOmGlow";
 
 export function CommitteeQuote() {
   const { t, b } = useLang();
 
   return (
     <section className="gradient-maroon text-maroon-foreground mandala-bg relative overflow-hidden rounded-3xl px-6 py-12 text-center shadow-lift border border-gold/30">
-      <MandalaGlow direction="normal" duration={45} opacity={0.8} />
+      <DivineOmGlow opacity={0.4} size="md" />
       <div className="glow-halo animate-halo pointer-events-none absolute inset-0" aria-hidden="true" />
       <blockquote className="relative mx-auto max-w-2xl z-10">
         <p 

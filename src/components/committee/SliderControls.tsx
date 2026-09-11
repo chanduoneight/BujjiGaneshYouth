@@ -20,12 +20,11 @@ export function SliderControls({
   const activeDotRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    if (activeDotRef.current) {
-      activeDotRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "center",
-      });
+    if (activeDotRef.current && dotsContainerRef.current) {
+      const container = dotsContainerRef.current;
+      const dot = activeDotRef.current;
+      const left = dot.offsetLeft - container.offsetWidth / 2 + dot.offsetWidth / 2;
+      container.scrollTo({ left, behavior: "smooth" });
     }
   }, [currentIndex]);
 

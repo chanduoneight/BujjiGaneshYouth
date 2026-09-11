@@ -3,7 +3,7 @@ import { Instagram, Youtube } from "lucide-react";
 import { contact, festival } from "@/data/festival";
 import { useLang } from "@/i18n/language";
 import { MushakFooterTracker } from "@/components/effects/MushakFooterTracker";
-import { MandalaGlow } from "@/components/effects/MandalaGlow";
+import { DivineOmGlow } from "@/components/effects/DivineOmGlow";
 
 export function Footer() {
   const { t, b } = useLang();
@@ -12,7 +12,9 @@ export function Footer() {
     <footer className="gradient-maroon text-maroon-foreground mandala-bg mt-16 pb-24 lg:pb-0 relative overflow-hidden border-t border-gold/30">
       {/* Mushak vehicle glides across the footer background on scroll */}
       <MushakFooterTracker />
-      <MandalaGlow direction="normal" duration={60} opacity={0.65} />
+
+      {/* Glowing Om Divine Symbol */}
+      <DivineOmGlow opacity={0.4} size="md" />
       <div className="mx-auto max-w-6xl px-4 py-12 relative z-10">
         <div className="text-center">
           <p className="text-gold text-xl font-bold drop-shadow-[0_0_12px_rgba(234,179,8,0.7)]">🙏 {t("bappaMorya")} 🙏</p>

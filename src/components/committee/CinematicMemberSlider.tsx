@@ -3,8 +3,6 @@ import { Link } from "@tanstack/react-router";
 import type { CommitteeMember } from "@/data/members";
 import { useLang } from "@/i18n/language";
 import { MemberSlide } from "./MemberSlide";
-import { SliderControls } from "./SliderControls";
-import { MandalaGlow } from "@/components/effects/MandalaGlow";
 import { ArrowLeft } from "lucide-react";
 
 interface CinematicSliderProps {
@@ -28,28 +26,17 @@ export function CinematicMemberSlider({
 
   const currentIndex = controlledIndex !== undefined ? controlledIndex : internalIndex;
 
-  // Change slide with 400ms element-by-element exit sequence
+  // Change slide directly without double-render timeouts
   const handleSetIndex = useCallback(
     (targetIndex: number) => {
       const newIndex = (targetIndex + members.length) % members.length;
       if (newIndex === currentIndex) return;
 
-      // Start exit animation on current slide
-      setIsExiting(true);
-      setFlashBars(true);
-
-      setTimeout(() => {
-        if (onIndexChange) {
-          onIndexChange(newIndex);
-        } else {
-          setInternalIndex(newIndex);
-        }
-        setIsExiting(false);
-      }, 400);
-
-      setTimeout(() => {
-        setFlashBars(false);
-      }, 700);
+      if (onIndexChange) {
+        onIndexChange(newIndex);
+      } else {
+        setInternalIndex(newIndex);
+      }
     },
     [currentIndex, members.length, onIndexChange]
   );
@@ -62,21 +49,23 @@ export function CinematicMemberSlider({
     handleSetIndex(currentIndex + 1);
   }, [currentIndex, handleSetIndex]);
 
-  // Auto-advance logic (6000ms) with hover pause and prefers-reduced-motion check
+  // Auto-advance logic: continuous photo change every second (1000ms) without stopping
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined" || members.length <= 1) return;
 
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (mediaQuery.matches) return;
 
-    if (isHovering || isExiting) return;
-
     const interval = setInterval(() => {
-      handleSetIndex(currentIndex + 1);
-    }, 6000);
+      if (onIndexChange) {
+        onIndexChange((currentIndex + 1) % members.length);
+      } else {
+        setInternalIndex((prev) => (prev + 1) % members.length);
+      }
+    }, 1200);
 
     return () => clearInterval(interval);
-  }, [currentIndex, isHovering, isExiting, handleSetIndex]);
+  }, [currentIndex, members.length, onIndexChange]);
 
   // Keyboard navigation (ArrowLeft / ArrowRight)
   useEffect(() => {
@@ -135,14 +124,26 @@ export function CinematicMemberSlider({
       id="cinematic-slider"
       role="region"
       aria-label="Committee members cinematic showcase"
-      className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#120608] via-[#1a080c] to-[#0d0305] text-white flex flex-col justify-between border-y border-gold/20 pt-8"
+      className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#120608] via-[#18070a] to-[#120608] text-white flex flex-col justify-between pt-8"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Background Mandala Glow */}
-      <MandalaGlow direction="normal" duration={120} opacity={0.35} />
+      {/* Atmospheric Golden Temple Radial Aura */}
+      <div
+        className="pointer-events-none absolute inset-0 flex items-center justify-center select-none overflow-hidden"
+        aria-hidden="true"
+      >
+        <div
+          className="w-[min(90vw,750px)] h-[min(90vw,750px)] rounded-full blur-3xl pointer-events-none"
+          style={{
+            background:
+              "radial-gradient(circle at 50% 50%, rgba(244, 166, 35, 0.22) 0%, rgba(184, 51, 42, 0.12) 45%, transparent 70%)",
+            animation: "glow-pulse 6s ease-in-out infinite",
+          }}
+        />
+      </div>
 
       {/* BACK TO HOME (Top Left) */}
       <Link
@@ -170,8 +171,8 @@ export function CinematicMemberSlider({
         GANESH CHATURTHI 2026
       </div>
 
-      {/* MAIN HERO PRESENTATION AREA (Full Deadpool Composition) */}
-      <div className="relative flex-1 min-h-[560px] sm:min-h-[620px] w-full flex items-center justify-center overflow-hidden px-4">
+      {/* MAIN HERO PRESENTATION AREA */}
+      <div className="relative flex-1 min-h-[560px] sm:min-h-[640px] w-full flex items-end justify-center overflow-hidden px-4">
         {members.map((member, i) => (
           <MemberSlide
             key={member.id}
@@ -185,17 +186,6 @@ export function CinematicMemberSlider({
             onViewProfile={handleScrollToGrid}
           />
         ))}
-      </div>
-
-      {/* SLIDER CONTROLS (Fixed Bottom Center) */}
-      <div className="relative z-30 pb-6">
-        <SliderControls
-          currentIndex={currentIndex}
-          total={members.length}
-          onPrev={handlePrev}
-          onNext={handleNext}
-          onDotClick={handleSetIndex}
-        />
       </div>
     </section>
   );

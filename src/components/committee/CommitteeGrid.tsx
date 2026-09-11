@@ -35,9 +35,9 @@ export function CommitteeGrid({ members, onCardClick }: CommitteeGridProps) {
   }, []);
 
   return (
-    <section id="committee-grid-section" ref={sectionRef} className="relative z-10 py-20 px-4 sm:px-6 max-w-7xl mx-auto">
+    <section id="committee-grid-section" ref={sectionRef} className="relative z-10 pt-4 pb-20 px-4 sm:px-6 max-w-7xl mx-auto">
       {/* Section Header */}
-      <div className="text-center mb-14">
+      <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold mb-3">
           <Sparkles className="w-3.5 h-3.5" />
           <span>21 PILLARS OF SRP COMMITTEE</span>

@@ -747,7 +747,7 @@
   font-family: var(--font-storm-gust), "Cinzel Decorative", "Russo One", "Anton", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   line-height: 0.95;
   background: linear-gradient(
     180deg,
@@ -760,10 +760,9 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.98))
-          drop-shadow(0 0 25px rgba(245, 166, 35, 0.75))
-          drop-shadow(3px 3px 0px #000)
-          drop-shadow(-1px -1px 0px rgba(255, 230, 120, 0.35));
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.9))
+          drop-shadow(0 0 16px rgba(245, 166, 35, 0.45))
+          drop-shadow(1px 1px 0px rgba(0, 0, 0, 0.8));
   position: relative;
   display: inline-block;
 }

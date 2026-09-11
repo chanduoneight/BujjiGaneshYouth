@@ -4,12 +4,10 @@ import { festival, contact } from "@/data/festival";
 import ganesh2026 from "@/assets/ganesha-2026.png";
 import { FestivalParticles } from "@/components/effects/FestivalParticles";
 import { FloatingPetals } from "@/components/effects/FloatingPetals";
-import { MandalaGlow } from "@/components/effects/MandalaGlow";
+import { DivineOmGlow } from "@/components/effects/DivineOmGlow";
 import { ScrollReveal } from "@/components/effects/ScrollReveal";
 import { DurvaHoverCard } from "@/components/effects/DurvaHoverCard";
 import { SwingingTrunkDivider } from "@/components/effects/SwingingTrunkDivider";
-import { CosmicParticles } from "@/components/effects/CosmicParticles";
-import { SacredGeometryOrbs } from "@/components/effects/SacredGeometryOrbs";
 import { Countdown } from "@/components/site/Countdown";
 import { PageMusicPlayer } from "@/components/site/PageMusicPlayer";
 import { Instagram, Youtube } from "lucide-react";
@@ -34,19 +32,14 @@ function Index() {
     <div className="min-h-screen">
       {/* Homepage Music Player */}
       <PageMusicPlayer audioSrc="/audio/ganesh-aarti.mp3" />
-      
+
       {/* Global festival particles */}
       <FestivalParticles count={isMobile ? 12 : 25} />
 
       {/* Hero Section */}
       <section className="gradient-maroon text-maroon-foreground mandala-bg relative overflow-hidden">
-        <MandalaGlow direction="normal" duration={50} opacity={0.8} />
-        {/* Cosmic golden dust particles — Brahmanda universe effect */}
-        <CosmicParticles count={isMobile ? 80 : 200} />
-        {/* Sacred geometry symbols floating in background */}
-        <SacredGeometryOrbs count={isMobile ? 5 : 10} />
+        <DivineOmGlow opacity={0.35} size="lg" />
         <FloatingPetals count={isMobile ? 4 : 8} />
-        <div className="glow-halo animate-halo pointer-events-none absolute inset-0" aria-hidden="true" />
         
         <div className="relative mx-auto max-w-7xl px-4 py-16 sm:py-24 text-center">
           {/* Sacred Mantra with shimmer effect */}
@@ -231,9 +224,7 @@ function Index() {
 
       {/* Bappa Morya Section - Most devotional */}
       <section className="gradient-maroon text-maroon-foreground py-16 text-center relative overflow-hidden">
-        <MandalaGlow direction="reverse" duration={60} opacity={0.8} />
-        {/* Sacred geometry orbs floating around mantra */}
-        <SacredGeometryOrbs count={isMobile ? 4 : 8} />
+        <DivineOmGlow opacity={0.4} size="md" />
         <div className="relative z-10">
           <p 
             className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-gold drop-shadow-[0_0_20px_rgba(234,179,8,0.85)] tracking-wide"

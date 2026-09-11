@@ -152,7 +152,7 @@ function RootComponent() {
         {/* Re-triggers Shri Ganesha drawing animation on every page change */}
         <GaneshaSketchLoader key={location.pathname} />
         {/* Global background sacred geometry orbital wheel for all pages */}
-        <RotatingSacredOrbits opacity={0.4} />
+        <RotatingSacredOrbits opacity={0.25} />
         {/* Global floating devotional petals (Marigold, Hibiscus, Durva grass) */}
         <DevotionalPetals count={18} isFixed />
         <SiteLayout>
