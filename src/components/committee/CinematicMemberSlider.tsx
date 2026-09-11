@@ -146,17 +146,19 @@ export function CinematicMemberSlider({
       </div>
 
       {/* BACK TO HOME (Top Left) */}
-      <Link
-        to="/"
-        className="absolute top-6 left-6 sm:left-8 z-30 flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/50 hover:bg-gold/20 border border-gold/30 hover:border-gold text-gold font-mono text-[10px] uppercase tracking-[1.5px] transition-all backdrop-blur-md shadow-sm"
-      >
-        <ArrowLeft className="w-3.5 h-3.5" />
-        <span>HOME</span>
-      </Link>
+      <div className="absolute top-6 left-6 sm:left-8 z-30 flex items-center gap-2">
+        <Link
+          to="/"
+          className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/50 hover:bg-gold/20 border border-gold/30 hover:border-gold text-gold font-mono text-[10px] uppercase tracking-[1.5px] transition-all backdrop-blur-md shadow-sm"
+        >
+          <ArrowLeft className="w-3.5 h-3.5" />
+          <span>{t("home")}</span>
+        </Link>
+      </div>
 
       {/* THREE VERTICAL BARS (Top Center) */}
       <div
-        className="absolute top-6 left-1/2 -translate-x-1/2 z-20 flex gap-1.5 pointer-events-none"
+        className="absolute top-6 left-1/2 -translate-x-1/2 z-20 hidden sm:flex gap-1.5 pointer-events-none"
         style={{
           animation: flashBars ? "barsFlash 0.4s ease-out" : "none",
         }}
@@ -166,9 +168,12 @@ export function CinematicMemberSlider({
         <div className="w-1 h-5 bg-gold/40 rounded-full" />
       </div>
 
-      {/* RELEASE LABEL (Top Right) */}
-      <div className="hidden sm:block absolute top-6 right-8 z-20 font-mono text-[10px] uppercase tracking-[2px] text-cream/40 pointer-events-none">
-        GANESH CHATURTHI 2026
+      {/* LANGUAGE TOGGLE & RELEASE LABEL (Top Right) */}
+      <div className="absolute top-6 right-6 sm:right-8 z-30 flex items-center gap-3">
+        <LanguageToggle className="scale-90 bg-black/60 border-gold/40 text-xs" />
+        <div className="hidden lg:block font-mono text-[10px] uppercase tracking-[2px] text-cream/40 pointer-events-none">
+          {lang === "te" ? "వినాయక చవితి 2026" : "GANESH CHATURTHI 2026"}
+        </div>
       </div>
 
       {/* MAIN HERO PRESENTATION AREA */}

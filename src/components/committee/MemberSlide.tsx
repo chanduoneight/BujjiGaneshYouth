@@ -190,7 +190,7 @@ export function MemberSlide({
         {/* Decorative Tagline */}
         <div className="flex items-center gap-2 mb-2 font-mono text-[9px] sm:text-[10px] tracking-[3px] text-gold uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
           <span className="w-5 h-[1.5px] bg-gold" />
-          <span>SRP COMMITTEE</span>
+          <span>{lang === "te" ? "SRP కమిటీ" : "SRP COMMITTEE"}</span>
         </div>
 
         {/* STORM GUST BLOCKBUSTER NAME TITLE */}
@@ -215,7 +215,7 @@ export function MemberSlide({
           className="font-mono text-[9px] uppercase tracking-[2px] text-cream/40 whitespace-nowrap"
           style={{ writingMode: "vertical-rl" }}
         >
-          SRP COMMITTEE
+          {lang === "te" ? "SRP కమిటీ" : "SRP COMMITTEE"}
         </div>
 
         <div className="flex flex-col gap-1 mt-1">
