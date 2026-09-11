@@ -15,6 +15,7 @@ import { Route as CommitteeRouteImport } from './routes/committee'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as HomeRouteImport } from './routes/home'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +47,11 @@ const GalleryRoute = GalleryRouteImport.update({
   path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HomeRoute = HomeRouteImport.update({
+  id: '/home',
+  path: '/home',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
   '/gallery': typeof GalleryRoute
+  '/home': typeof HomeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
   '/gallery': typeof GalleryRoute
+  '/home': typeof HomeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,12 +79,27 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
   '/gallery': typeof GalleryRoute
+  '/home': typeof HomeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/committee' | '/contact' | '/events' | '/gallery'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/committee'
+    | '/contact'
+    | '/events'
+    | '/gallery'
+    | '/home'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/committee' | '/contact' | '/events' | '/gallery'
+  to:
+    | '/'
+    | '/about'
+    | '/committee'
+    | '/contact'
+    | '/events'
+    | '/gallery'
+    | '/home'
   id:
     | '__root__'
     | '/'
@@ -85,6 +108,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/events'
     | '/gallery'
+    | '/home'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -94,6 +118,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   EventsRoute: typeof EventsRoute
   GalleryRoute: typeof GalleryRoute
+  HomeRoute: typeof HomeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -140,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/home': {
+      id: '/home'
+      path: '/home'
+      fullPath: '/home'
+      preLoaderRoute: typeof HomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -150,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   EventsRoute: EventsRoute,
   GalleryRoute: GalleryRoute,
+  HomeRoute: HomeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

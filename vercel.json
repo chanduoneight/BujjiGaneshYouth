@@ -1,4 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "NITRO_PRESET=vercel vite build"
+  "buildCommand": "NITRO_PRESET=vercel vite build",
+  "redirects": [
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/Home", "destination": "/", "permanent": true },
+    { "source": "/HOME", "destination": "/", "permanent": true }
+  ]
 }

@@ -19,6 +19,19 @@ import { RotatingSacredOrbits } from "@/components/effects/RotatingSacredOrbits"
 import { DevotionalPetals } from "@/components/effects/DevotionalPetals";
 
 function NotFoundComponent() {
+  const location = useLocation();
+  const router = useRouter();
+
+  useEffect(() => {
+    const rawPath = location.pathname;
+    const lowerPath = rawPath.toLowerCase().replace(/\/$/, "");
+    if (lowerPath === "/home" || lowerPath === "") {
+      router.navigate({ to: "/", replace: true });
+    } else if (["/about", "/events", "/gallery", "/committee", "/contact"].includes(lowerPath)) {
+      router.navigate({ to: lowerPath as any, replace: true });
+    }
+  }, [location.pathname, router]);
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
