@@ -156,10 +156,20 @@ function GridCard({
         <div className={`absolute inset-0 z-20 flex flex-col items-center justify-end pb-3 sm:pb-4 px-2 bg-gradient-to-t from-black/95 via-black/40 to-transparent transition-all duration-300 pointer-events-none text-center ${
           isOverlayOpen ? "opacity-100" : "opacity-0 group-hover:opacity-100"
         }`}>
-          <div className="jailer-title-text font-storm-gust text-base sm:text-xl md:text-2xl font-black tracking-wider leading-none drop-shadow-[0_4px_10px_rgba(0,0,0,1)] uppercase">
+          <div
+            className={`jailer-title-text ${
+              lang === "te"
+                ? "font-telugu-hero font-bold tracking-normal leading-snug"
+                : "font-storm-gust font-black tracking-wider leading-none uppercase"
+            } text-base sm:text-lg md:text-xl drop-shadow-[0_4px_10px_rgba(0,0,0,1)]`}
+          >
             {lang === "te" ? member.nameTe : member.name}
           </div>
-          <div className="jailer-subtitle text-[8px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.25em] text-white/90 mt-1 sm:mt-1.5 font-bold">
+          <div
+            className={`jailer-subtitle ${
+              lang === "te" ? "tracking-normal font-sans" : "tracking-[0.2em] sm:tracking-[0.25em]"
+            } text-[8px] sm:text-[10px] text-white/90 mt-1 sm:mt-1.5 font-bold`}
+          >
             {lang === "te" ? member.roleTe : member.role}
           </div>
         </div>

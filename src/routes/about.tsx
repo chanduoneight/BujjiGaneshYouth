@@ -47,8 +47,8 @@ function About() {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* About Page Music Player */}
-      <PageMusicPlayer audioSrc="/audio/dhol.mp3" />
+      {/* About Page Music Player — Ekadantaya Vakratundaya Flute */}
+      <PageMusicPlayer audioSrc="/audio/flute.mp3" />
       
       <FestivalParticles count={20} />
 

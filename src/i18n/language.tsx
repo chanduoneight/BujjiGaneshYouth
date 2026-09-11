@@ -289,12 +289,12 @@ export const dictionary = {
 
   // Cinematic Committee Slider
   "committee.cinematic.title": { en: "Our Committee", te: "మన కమిటీ" },
-  "committee.cinematic.subtitle": { en: "The souls behind the celebration", te: "ఉత్సవ్ వెనుక ఉన్న ఆత్మలు" },
-  "committee.cinematic.castLine": { en: "SRP KURROLLU • SRUNGARAPURAM • SINCE 2007", te: "ఎస్ఆర్పి కుర్రోళ్ళు • శృంగారపురం • 2007 నుండి" },
+  "committee.cinematic.subtitle": { en: "The youth force behind the celebration", te: "ఉత్సవాల వెనుక ఉన్న యువశక్తి" },
+  "committee.cinematic.castLine": { en: "SRP KURROLLU • SRUNGARAPURAM • SINCE 2007", te: "SRP కుర్రోళ్ళు • శృంగారాపురం • 2007 నుండి" },
   "committee.cinematic.member": { en: "COMMITTEE MEMBER", te: "కమిటీ సభ్యుడు" },
   "committee.cinematic.scrollHint": { en: "Swipe to Explore", te: "స్వైప్ చేయండి" },
-  "committee.cinematic.gridTitle": { en: "The Full Committee", te: "మొత్తం కమిటీ" },
-  "committee.cinematic.gridSubtitle": { en: "21 members. One family. Infinite devotion.", te: "21 మంది. ఒక కుటుంబం. అనంత భక్తి." },
+  "committee.cinematic.gridTitle": { en: "The Full Committee", te: "కమిటీ సభ్యులందరూ" },
+  "committee.cinematic.gridSubtitle": { en: "21 members. One family. Infinite devotion.", te: "21 మంది సభ్యులు • ఒకే కుటుంబం • అపారమైన భక్తి" },
 } satisfies Record<string, Bilingual>;
 
 const LanguageContext = createContext<Ctx | null>(null);

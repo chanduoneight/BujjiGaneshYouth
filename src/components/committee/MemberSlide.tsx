@@ -194,7 +194,13 @@ export function MemberSlide({
         </div>
 
         {/* STORM GUST BLOCKBUSTER NAME TITLE */}
-        <div className="jailer-title-text font-storm-gust text-[clamp(26px,5.2vw,64px)] tracking-wider leading-[0.98] drop-shadow-[0_8px_20px_rgba(0,0,0,1)] select-none break-words max-w-full">
+        <div
+          className={`jailer-title-text ${
+            lang === "te"
+              ? "font-telugu-hero text-[clamp(24px,4.8vw,56px)] leading-tight tracking-normal"
+              : "font-storm-gust text-[clamp(26px,5.2vw,64px)] tracking-wider leading-[0.98] uppercase"
+          } drop-shadow-[0_8px_20px_rgba(0,0,0,1)] select-none break-words max-w-full`}
+        >
           {lang === "te" ? member.nameTe : member.name}
         </div>
       </div>

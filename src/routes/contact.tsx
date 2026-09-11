@@ -5,6 +5,7 @@ import { Instagram, Youtube, MapPin } from "lucide-react";
 import { ScrollReveal } from "@/components/effects/ScrollReveal";
 import { FestivalParticles } from "@/components/effects/FestivalParticles";
 import { DivineOmGlow } from "@/components/effects/DivineOmGlow";
+import { PageMusicPlayer } from "@/components/site/PageMusicPlayer";
 
 export const Route = createFileRoute("/contact")({
   component: Contact,
@@ -15,6 +16,9 @@ function Contact() {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
+      {/* Contact Page Music Player — Ekadantaya Vakratundaya Flute */}
+      <PageMusicPlayer audioSrc="/audio/flute.mp3" />
+
       <FestivalParticles count={15} />
 
       {/* Hero Section */}

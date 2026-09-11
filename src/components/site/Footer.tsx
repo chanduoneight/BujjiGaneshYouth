@@ -6,7 +6,7 @@ import { MushakFooterTracker } from "@/components/effects/MushakFooterTracker";
 import { DivineOmGlow } from "@/components/effects/DivineOmGlow";
 
 export function Footer() {
-  const { t, b } = useLang();
+  const { t, b, lang } = useLang();
 
   return (
     <footer className="gradient-maroon text-maroon-foreground mandala-bg mt-16 pb-24 lg:pb-0 relative overflow-hidden border-t border-gold/30">
@@ -47,12 +47,23 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="border-gold/25 text-maroon-foreground/70 mt-10 border-t pt-6 text-center text-xs">
+        <div className="border-gold/25 text-maroon-foreground/70 mt-10 border-t pt-6 text-center text-xs space-y-1">
           <p>
             © {festival.year} {b(festival.committeeTitle)} — {b(festival.committeeName)}. All
             Rights Reserved.
           </p>
-          <p className="mt-1">{t("madeWith")}</p>
+          <p>{t("madeWith")}</p>
+          <p>
+            <span>{lang === "te" ? "రూపకల్పన: " : "Developed by "}</span>
+            <a
+              href="https://www.linkedin.com/in/chandu-vaka-430a36289/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-gold/90 hover:text-gold hover:underline transition-colors"
+            >
+              Vaka Chandu
+            </a>
+          </p>
         </div>
       </div>
     </footer>

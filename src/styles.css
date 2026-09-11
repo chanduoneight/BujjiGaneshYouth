@@ -23,6 +23,7 @@
   --font-sans: "Mukta", "Noto Sans Telugu", system-ui, sans-serif;
   --font-jailer: "Cinzel Decorative", "Russo One", "Anton", "Bebas Neue", "Black Ops One", "Impact", sans-serif;
   --font-storm-gust: "Cinzel Decorative", "Russo One", "Anton", "Bebas Neue", "Impact", sans-serif;
+  --font-telugu-hero: "Ramabhadra", "Noto Serif Telugu", "Noto Sans Telugu", sans-serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -752,12 +753,17 @@
   text-transform: uppercase;
 }
 
+.font-telugu-hero {
+  font-family: "Ramabhadra", "Noto Serif Telugu", "Noto Sans Telugu", sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 700;
+}
+
 .jailer-title-text {
-  font-family: var(--font-storm-gust), "Cinzel Decorative", "Russo One", "Anton", sans-serif;
+  font-family: var(--font-storm-gust), "Ramabhadra", "Noto Serif Telugu", "Cinzel Decorative", "Russo One", "Anton", sans-serif;
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  line-height: 0.95;
+  line-height: 1.15;
   background: linear-gradient(
     180deg,
     #fff9a6 0%,
