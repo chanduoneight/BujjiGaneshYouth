@@ -189,14 +189,6 @@ export function CommitteeSoundtrackVisualizer({
     }
   };
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    setHoverPercent(Math.max(0, Math.min(1, x / rect.width)));
-  };
-
-  const progressPercent = duration > 0 ? (currentTime / duration) * 100 : 0;
-
   return (
     <div className="relative z-20 w-full overflow-hidden -mt-20 sm:-mt-28 md:-mt-32 mb-2 py-1 select-none bg-transparent group">
       <audio

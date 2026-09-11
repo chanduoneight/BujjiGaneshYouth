@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "@tanstack/react-router";
 import type { CommitteeMember } from "@/data/members";
 import { useLang } from "@/i18n/language";
+import { LanguageToggle } from "@/components/site/LanguageToggle";
 import { MemberSlide } from "./MemberSlide";
 import { ArrowLeft } from "lucide-react";
 
