@@ -294,7 +294,7 @@ export const dictionary = {
   "committee.cinematic.member": { en: "COMMITTEE MEMBER", te: "కమిటీ సభ్యుడు" },
   "committee.cinematic.scrollHint": { en: "Swipe to Explore", te: "స్వైప్ చేయండి" },
   "committee.cinematic.gridTitle": { en: "The Full Committee", te: "కమిటీ సభ్యులందరూ" },
-  "committee.cinematic.gridSubtitle": { en: "21 members. One family. Infinite devotion.", te: "21 మంది సభ్యులు • ఒకే కుటుంబం • అపారమైన భక్తి" },
+  "committee.cinematic.gridSubtitle": { en: "23 members. One family. Infinite devotion.", te: "23 మంది సభ్యులు • ఒకే కుటుంబం • అపారమైన భక్తి" },
 } satisfies Record<string, Bilingual>;
 
 const LanguageContext = createContext<Ctx | null>(null);

@@ -19,6 +19,8 @@ import photo18 from "@/assets/Palagani chakrapani.png";
 import photo19 from "@/assets/Vuyyuru rakesh.png";
 import photo20 from "@/assets/Parisa SUMANTH.png";
 import photo21 from "@/assets/Penumaka lokesh.png";
+import photo22 from "@/assets/VALLURI MAHESH BABU.png";
+import photo23 from "@/assets/Nuthakki Purna.png";
 
 export interface CommitteeMember {
   id: number;
@@ -283,6 +285,30 @@ export const committeeMembers: CommitteeMember[] = [
     role: "Volunteer",
     roleTe: "వాలంటీర్",
     photo: photo1,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 22,
+    name: "Mahesh Babu Valluri",
+    nameTe: "మహేష్ బాబు వల్లూరి",
+    firstName: "MAHESH BABU",
+    lastName: "VALLURI",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo22,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 23,
+    name: "Purna Nuthakki",
+    nameTe: "పూర్ణ నూతక్కి",
+    firstName: "PURNA",
+    lastName: "NUTHAKKI",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo23,
     bio: "Dedicated active member of SRP Committee Kurrollu.",
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
