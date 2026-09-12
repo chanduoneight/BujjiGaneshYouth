@@ -108,8 +108,8 @@ function Gallery() {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Gallery Page Background Music Player — Jai Dev Jai Dev Aarti */}
-      <PageMusicPlayer audioSrc="/audio/jai-dev.mp3" />
+      {/* Gallery Page Background Music Player — Divine Flute */}
+      <PageMusicPlayer audioSrc="/audio/flute.mp3" />
 
       <FestivalParticles count={15} />
 

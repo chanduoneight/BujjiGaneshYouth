@@ -6,8 +6,10 @@
 
 Place your images in the appropriate folder:
 
+- **2026 Festival Photos**: `public/gallery/2026/`
 - **Logo Inauguration Photos**: `public/gallery/logo-inauguration/`
 - **Celebration Photos**: `public/gallery/celebrations/`
+- **Yearly Idols**: `public/gallery/idols/`
 
 **Recommended Image Format:**
 - Format: JPG or PNG

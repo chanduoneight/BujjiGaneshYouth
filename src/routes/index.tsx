@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLang } from "@/i18n/language";
 import { festival, contact } from "@/data/festival";
-import ganesh2026 from "@/assets/ganesha-2026.png";
 import { FestivalParticles } from "@/components/effects/FestivalParticles";
 import { FloatingPetals } from "@/components/effects/FloatingPetals";
 import { DivineOmGlow } from "@/components/effects/DivineOmGlow";
@@ -148,9 +147,9 @@ function Index() {
                   style={{ animationDuration: "60s" }}
                 />
 
-                {/* 2026 Cutout Idol Image */}
+                {/* Bujji Ganesh Home Page Idol Image */}
                 <img 
-                  src={ganesh2026} 
+                  src="/gallery/idols/BujjiganeshHomepages.png" 
                   alt="Lord Ganesha Idol 2026 - Bujji Ganesh Youth" 
                   className="max-h-[420px] sm:max-h-[580px] w-auto object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.5)] transition-transform duration-500 hover:scale-105 select-none"
                 />
