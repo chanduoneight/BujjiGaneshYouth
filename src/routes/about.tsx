@@ -125,11 +125,11 @@ function About() {
                     <span className="text-xs font-bold uppercase tracking-wider text-primary px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
                       {item.badge}
                     </span>
-                    <h3 className="font-display text-2xl font-bold text-maroon">
+                    <h3 className="font-display text-2xl font-bold text-maroon text-center">
                       {item.year} • {item.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed text-base max-w-md mx-auto">
+                  <p className="text-center text-muted-foreground leading-relaxed text-base max-w-md mx-auto">
                     {item.desc}
                   </p>
                 </div>
@@ -143,20 +143,20 @@ function About() {
               <div className="absolute -right-6 -bottom-6 text-9xl opacity-10 select-none pointer-events-none">
                 🏛️
               </div>
-              <div className="relative z-10 flex flex-col items-center">
+              <div className="relative z-10 flex flex-col items-center text-center">
                 <div className="flex flex-col items-center gap-2 mb-4">
                   <div className="p-3.5 rounded-2xl bg-primary text-primary-foreground shadow-md inline-flex items-center justify-center mb-1">
                     <Sparkles className="h-6 w-6" />
                   </div>
-                  <span className="text-xs uppercase tracking-wider text-primary font-bold">{t("venueSublabel")}</span>
-                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-maroon">
+                  <span className="text-xs uppercase tracking-wider text-primary font-bold text-center">{t("venueSublabel")}</span>
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-maroon text-center">
                     {t("venueCardTitle")}
                   </h3>
                 </div>
-                <p className="text-base sm:text-lg text-foreground/80 leading-relaxed max-w-2xl mx-auto">
+                <p className="text-center text-base sm:text-lg text-foreground/80 leading-relaxed max-w-2xl mx-auto">
                   {t("venueCardDesc")}
                 </p>
-                <div className="mt-6 pt-5 border-t border-border/60 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground w-full">
+                <div className="mt-6 pt-5 border-t border-border/60 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground w-full text-center">
                   <div className="flex items-center justify-center gap-1.5">
                     <Sun className="w-4 h-4 text-gold" />
                     <span><strong>19+</strong> Continuous Annual Celebrations</span>
@@ -183,20 +183,20 @@ function About() {
               >
                 🌺
               </div>
-              <div className="relative flex flex-col items-center">
+              <div className="relative flex flex-col items-center text-center">
                 <div className="flex flex-col items-center gap-3 mb-6">
                   <div className="p-3 rounded-2xl bg-gold/10 border border-gold/20 text-primary inline-flex items-center justify-center">
                     <Sparkles className="h-7 w-7" />
                   </div>
-                  <h2 className="font-display text-3xl sm:text-4xl font-bold text-maroon">
+                  <h2 className="font-display text-3xl sm:text-4xl font-bold text-maroon text-center">
                     {t("whyWeCelebrate")}
                   </h2>
                 </div>
-                <div className="text-muted-foreground max-w-2xl mx-auto space-y-4">
-                  <p className="text-lg leading-relaxed">
+                <div className="text-center text-muted-foreground max-w-2xl mx-auto space-y-4">
+                  <p className="text-center text-lg leading-relaxed">
                     {t("whyWeCelebrateText1")}
                   </p>
-                  <p className="text-lg leading-relaxed">
+                  <p className="text-center text-lg leading-relaxed">
                     {t("whyWeCelebrateText2")}
                   </p>
                 </div>
@@ -217,23 +217,23 @@ function About() {
               >
                 🙏
               </div>
-              <div className="relative flex flex-col items-center">
+              <div className="relative flex flex-col items-center text-center">
                 <div className="flex flex-col items-center gap-3 mb-6">
                   <div className="p-3 rounded-2xl bg-gold/10 border border-gold/20 text-primary inline-flex items-center justify-center">
                     <Heart className="h-7 w-7" />
                   </div>
-                  <h2 className="font-display text-3xl sm:text-4xl font-bold text-maroon">
+                  <h2 className="font-display text-3xl sm:text-4xl font-bold text-maroon text-center">
                     {t("importance")}
                   </h2>
                 </div>
-                <div className="text-muted-foreground max-w-2xl mx-auto space-y-4">
-                  <p className="text-lg leading-relaxed">
+                <div className="text-center text-muted-foreground max-w-2xl mx-auto space-y-4">
+                  <p className="text-center text-lg leading-relaxed">
                     {t("importanceText1")}
                   </p>
-                  <p className="text-lg leading-relaxed">
+                  <p className="text-center text-lg leading-relaxed">
                     {t("importanceText2")}
                   </p>
-                  <p className="text-lg leading-relaxed">
+                  <p className="text-center text-lg leading-relaxed">
                     {t("importanceText3")}
                   </p>
                 </div>
@@ -254,35 +254,35 @@ function About() {
               >
                 🪔
               </div>
-              <div className="relative flex flex-col items-center">
+              <div className="relative flex flex-col items-center text-center">
                 <div className="flex flex-col items-center gap-3 mb-6">
                   <div className="p-3 rounded-2xl bg-gold/10 border border-gold/20 text-primary inline-flex items-center justify-center">
                     <Flame className="h-7 w-7" />
                   </div>
-                  <h2 className="font-display text-3xl sm:text-4xl font-bold text-maroon">
+                  <h2 className="font-display text-3xl sm:text-4xl font-bold text-maroon text-center">
                     {t("ourTraditions")}
                   </h2>
                 </div>
-                <div className="text-muted-foreground max-w-2xl mx-auto">
-                  <p className="text-lg leading-relaxed mb-8">
+                <div className="text-center text-muted-foreground max-w-2xl mx-auto">
+                  <p className="text-center text-lg leading-relaxed mb-8">
                     {t("ourTraditionsText")}
                   </p>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div className="flex flex-col items-center text-center p-5 rounded-2xl bg-background/60 border border-gold/25 shadow-sm hover:border-gold/60 transition-colors">
                       <div className="text-3xl mb-2">🎭</div>
-                      <h4 className="font-semibold text-primary text-base mb-1">{t("culturalPrograms")}</h4>
-                      <p className="text-sm text-muted-foreground">{t("culturalProgramsDesc")}</p>
+                      <h4 className="font-semibold text-primary text-base mb-1 text-center">{t("culturalPrograms")}</h4>
+                      <p className="text-sm text-muted-foreground text-center">{t("culturalProgramsDesc")}</p>
                     </div>
                     <div className="flex flex-col items-center text-center p-5 rounded-2xl bg-background/60 border border-gold/25 shadow-sm hover:border-gold/60 transition-colors">
                       <div className="text-3xl mb-2">🕉️</div>
-                      <h4 className="font-semibold text-primary text-base mb-1">{t("dailyRituals")}</h4>
-                      <p className="text-sm text-muted-foreground">{t("dailyRitualsDesc")}</p>
+                      <h4 className="font-semibold text-primary text-base mb-1 text-center">{t("dailyRituals")}</h4>
+                      <p className="text-sm text-muted-foreground text-center">{t("dailyRitualsDesc")}</p>
                     </div>
                     <div className="flex flex-col items-center text-center p-5 rounded-2xl bg-background/60 border border-gold/25 shadow-sm hover:border-gold/60 transition-colors">
                       <div className="text-3xl mb-2">🌊</div>
-                      <h4 className="font-semibold text-primary text-base mb-1">{t("visarjanCeremony")}</h4>
-                      <p className="text-sm text-muted-foreground">{t("visarjanCeremonyDesc")}</p>
+                      <h4 className="font-semibold text-primary text-base mb-1 text-center">{t("visarjanCeremony")}</h4>
+                      <p className="text-sm text-muted-foreground text-center">{t("visarjanCeremonyDesc")}</p>
                     </div>
                   </div>
                 </div>
@@ -297,22 +297,22 @@ function About() {
         <div className="mx-auto max-w-4xl px-4">
           <ScrollReveal variant="fade-up">
             <div className="glass-card p-8 sm:p-12 text-center">
-              <div className="flex flex-col items-center gap-3 mb-6">
+              <div className="flex flex-col items-center gap-3 mb-6 text-center">
                 <div className="p-3 rounded-2xl bg-gold/10 border border-gold/20 text-primary inline-flex items-center justify-center">
                   <Users className="h-7 w-7" />
                 </div>
-                <h2 className="font-display text-3xl sm:text-4xl font-bold text-maroon">
+                <h2 className="font-display text-3xl sm:text-4xl font-bold text-maroon text-center">
                   {t("ourStory")}
                 </h2>
               </div>
-              <div className="text-muted-foreground max-w-2xl mx-auto space-y-4">
-                <p className="text-lg leading-relaxed">
+              <div className="text-center text-muted-foreground max-w-2xl mx-auto space-y-4">
+                <p className="text-center text-lg leading-relaxed">
                   {t("ourStoryText1")}
                 </p>
-                <p className="text-lg leading-relaxed">
+                <p className="text-center text-lg leading-relaxed">
                   {t("ourStoryText2")}
                 </p>
-                <p className="text-lg leading-relaxed">
+                <p className="text-center text-lg leading-relaxed">
                   {t("ourStoryText3")}
                 </p>
               </div>
@@ -326,21 +326,21 @@ function About() {
         <DivineOmGlow opacity={0.4} size="md" />
         <div className="relative z-10 mx-auto max-w-4xl px-4">
           <ScrollReveal variant="fade-up">
-            <div className="text-center">
-              <div className="inline-flex items-center gap-3 mb-6">
+            <div className="text-center flex flex-col items-center">
+              <div className="inline-flex items-center justify-center gap-3 mb-6 text-center">
                 <Heart className="h-10 w-10 text-gold" />
-                <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
+                <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] text-center">
                   {b(festival.committeeTitle)} • {b(festival.committeeName)}
                 </h2>
               </div>
-              <div className="text-white/95 text-lg leading-relaxed space-y-4 max-w-3xl mx-auto font-medium drop-shadow-[0_1px_6px_rgba(0,0,0,0.7)]">
-                <p>
+              <div className="text-white/95 text-lg leading-relaxed space-y-4 max-w-3xl mx-auto font-medium drop-shadow-[0_1px_6px_rgba(0,0,0,0.7)] text-center">
+                <p className="text-center">
                   {t("bujjiGaneshYouthText1")}
                 </p>
-                <p>
+                <p className="text-center">
                   {t("bujjiGaneshYouthText2")}
                 </p>
-                <p className="text-2xl font-bold text-gold pt-4 drop-shadow-[0_0_12px_rgba(234,179,8,0.7)]">
+                <p className="text-center text-2xl font-bold text-gold pt-4 drop-shadow-[0_0_12px_rgba(234,179,8,0.7)]">
                   {t("togetherMessage")}
                 </p>
               </div>
@@ -360,30 +360,30 @@ function About() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <ScrollReveal variant="scale-in" delay={0}>
-              <div className="glass-card p-6 text-center h-full hover:border-gold hover:-translate-y-1">
+              <div className="glass-card p-6 text-center h-full hover:border-gold hover:-translate-y-1 flex flex-col items-center">
                 <div className="text-5xl mb-4">🙏</div>
-                <h3 className="font-display text-xl font-bold text-maroon mb-3">{t("devotion")}</h3>
-                <p className="text-muted-foreground">
+                <h3 className="font-display text-xl font-bold text-maroon mb-3 text-center">{t("devotion")}</h3>
+                <p className="text-muted-foreground text-center">
                   {t("devotionDesc")}
                 </p>
               </div>
             </ScrollReveal>
             
             <ScrollReveal variant="scale-in" delay={120}>
-              <div className="glass-card p-6 text-center h-full hover:border-gold hover:-translate-y-1">
+              <div className="glass-card p-6 text-center h-full hover:border-gold hover:-translate-y-1 flex flex-col items-center">
                 <div className="text-5xl mb-4">🤝</div>
-                <h3 className="font-display text-xl font-bold text-maroon mb-3">{t("unity")}</h3>
-                <p className="text-muted-foreground">
+                <h3 className="font-display text-xl font-bold text-maroon mb-3 text-center">{t("unity")}</h3>
+                <p className="text-muted-foreground text-center">
                   {t("unityDesc")}
                 </p>
               </div>
             </ScrollReveal>
             
             <ScrollReveal variant="scale-in" delay={240}>
-              <div className="glass-card p-6 text-center h-full hover:border-gold hover:-translate-y-1">
+              <div className="glass-card p-6 text-center h-full hover:border-gold hover:-translate-y-1 flex flex-col items-center">
                 <div className="text-5xl mb-4">💪</div>
-                <h3 className="font-display text-xl font-bold text-maroon mb-3">{t("service")}</h3>
-                <p className="text-muted-foreground">
+                <h3 className="font-display text-xl font-bold text-maroon mb-3 text-center">{t("service")}</h3>
+                <p className="text-muted-foreground text-center">
                   {t("serviceDesc")}
                 </p>
               </div>
@@ -396,14 +396,14 @@ function About() {
       <section className="bg-transparent py-12 relative z-10">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <ScrollReveal variant="fade-up">
-            <div className="glass-card p-8">
-              <p className="font-display text-2xl sm:text-3xl font-bold text-maroon mb-2">
+            <div className="glass-card p-8 text-center flex flex-col items-center">
+              <p className="font-display text-2xl sm:text-3xl font-bold text-maroon mb-2 text-center">
                 గణపతి బప్పా మోరియా!
               </p>
-              <p className="text-gold text-xl font-semibold">
+              <p className="text-gold text-xl font-semibold text-center">
                 🙏 {t("bappaMorya")} 🙏
               </p>
-              <p className="text-muted-foreground mt-4 text-lg">
+              <p className="text-muted-foreground mt-4 text-lg text-center">
                 {t("closingBlessing")}
               </p>
             </div>
