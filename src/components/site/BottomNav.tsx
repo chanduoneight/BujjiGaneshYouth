@@ -1,77 +1,70 @@
-import { Link } from "@tanstack/react-router";
-import { Home, Images, MoreHorizontal, PartyPopper } from "lucide-react";
-import { useState } from "react";
-
-import { moreMobileLinks, primaryMobileLinks } from "@/components/site/nav-links";
-import { useLang } from "@/i18n/language";
+import { Link, useLocation } from "@tanstack/react-router";
 import {
-  Drawer,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
+  Home,
+  Info,
+  PartyPopper,
+  Images,
+  Users,
+  Phone,
+} from "lucide-react";
+import { navLinks } from "@/components/site/nav-links";
+import { useLang } from "@/i18n/language";
 
-const icons: Record<string, typeof Home> = {
+const navIcons: Record<string, typeof Home> = {
   "/": Home,
+  "/about": Info,
   "/events": PartyPopper,
   "/gallery": Images,
+  "/committee": Users,
+  "/contact": Phone,
 };
 
 export function BottomNav() {
   const { t } = useLang();
-  const [open, setOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <nav
-      className="border-gold/40 bg-background/95 fixed inset-x-0 bottom-0 z-50 border-t pb-[env(safe-area-inset-bottom)] backdrop-blur-md lg:hidden"
-      aria-label="Quick navigation"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-gold/40 bg-background/95 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.08)] pb-[calc(env(safe-area-inset-bottom)+6px)] pt-2 px-1 lg:hidden"
+      aria-label="Bottom mobile navigation"
     >
-      <ul className="mx-auto grid max-w-md grid-cols-4">
-        {primaryMobileLinks.map((link) => {
-          const Icon = icons[link.to] ?? Home;
+      <div className="mx-auto flex max-w-lg items-center justify-around gap-0.5 sm:gap-1">
+        {navLinks.map((link) => {
+          const Icon = navIcons[link.to] ?? Home;
+          const isExactHome = link.to === "/";
+          const isActive = isExactHome
+            ? location.pathname === "/" || location.pathname === ""
+            : location.pathname.startsWith(link.to);
+
           return (
-            <li key={link.to}>
-              <Link
-                to={link.to}
-                activeOptions={{ exact: link.to === "/" }}
-                activeProps={{ "data-current": "true" }}
-                className="text-muted-foreground data-[current=true]:text-primary flex min-h-14 flex-col items-center justify-center gap-1 text-[11px] font-medium"
+            <Link
+              key={link.to}
+              to={link.to}
+              activeOptions={{ exact: isExactHome }}
+              className={`group flex min-w-0 flex-1 flex-col items-center justify-center rounded-2xl py-1.5 px-1 transition-all duration-200 active:scale-95 ${
+                isActive
+                  ? "gradient-saffron text-primary-foreground font-bold shadow-md shadow-amber-500/25 ring-1 ring-gold/50"
+                  : "text-foreground/75 hover:bg-gold/10 hover:text-maroon font-medium"
+              }`}
+            >
+              <Icon
+                className={`h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:scale-110 ${
+                  isActive ? "text-primary-foreground" : "text-maroon/80"
+                }`}
+                aria-hidden="true"
+              />
+              <span
+                className={`mt-0.5 truncate text-[10px] sm:text-[11px] leading-tight ${
+                  isActive ? "text-primary-foreground font-bold" : "text-foreground/80"
+                }`}
               >
-                <Icon className="h-5 w-5" aria-hidden="true" />
-                <span className="max-w-full truncate px-1">{t(link.key)}</span>
-              </Link>
-            </li>
+                {t(link.key)}
+              </span>
+            </Link>
           );
         })}
-        <li>
-          <Drawer open={open} onOpenChange={setOpen}>
-            <DrawerTrigger className="text-muted-foreground flex min-h-14 w-full flex-col items-center justify-center gap-1 text-[11px] font-medium">
-              <MoreHorizontal className="h-5 w-5" aria-hidden="true" />
-              <span>{t("more")}</span>
-            </DrawerTrigger>
-            <DrawerContent className="bg-background">
-              <DrawerHeader>
-                <DrawerTitle className="text-maroon font-display">{t("more")}</DrawerTitle>
-              </DrawerHeader>
-              <ul className="grid gap-1 px-4 pb-8">
-                {moreMobileLinks.map((link) => (
-                  <li key={link.to}>
-                    <Link
-                      to={link.to}
-                      onClick={() => setOpen(false)}
-                      activeProps={{ "data-current": "true" }}
-                      className="hover:bg-accent data-[current=true]:bg-accent data-[current=true]:text-maroon flex min-h-12 items-center rounded-xl px-4 text-base font-medium"
-                    >
-                      {t(link.key)}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </DrawerContent>
-          </Drawer>
-        </li>
-      </ul>
+      </div>
     </nav>
   );
 }
+

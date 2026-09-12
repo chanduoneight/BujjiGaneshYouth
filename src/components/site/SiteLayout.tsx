@@ -14,7 +14,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
     <div className="flex min-h-screen flex-col">
       {!isCommitteePage && <AnnouncementBar />}
       {!isCommitteePage && <Navbar />}
-      <main id="main" className="flex-1 pb-16 lg:pb-0">
+      <main id="main" className="flex-1 pb-24 lg:pb-0">
         {children}
       </main>
       <Footer />
