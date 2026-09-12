@@ -117,23 +117,19 @@ function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {historyMilestones.map((item, index) => (
               <ScrollReveal key={item.year} variant="fade-up" delay={index * 100}>
-                <div className="glass-card p-6 sm:p-8 relative overflow-hidden h-full border border-gold/20 hover:border-gold/60 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <span className="text-3xl p-2 rounded-xl bg-gold/10 border border-gold/20">
-                        {item.icon}
-                      </span>
-                      <div>
-                        <span className="text-xs font-bold uppercase tracking-wider text-primary px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20">
-                          {item.badge}
-                        </span>
-                        <h3 className="font-display text-2xl font-bold text-maroon mt-1">
-                          {item.year} • {item.title}
-                        </h3>
-                      </div>
-                    </div>
+                <div className="glass-card p-6 sm:p-8 relative overflow-hidden h-full border border-gold/20 hover:border-gold/60 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col items-center text-center">
+                  <div className="flex flex-col items-center gap-3 mb-4">
+                    <span className="text-3xl p-3 rounded-2xl bg-gold/10 border border-gold/20 inline-flex items-center justify-center">
+                      {item.icon}
+                    </span>
+                    <span className="text-xs font-bold uppercase tracking-wider text-primary px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
+                      {item.badge}
+                    </span>
+                    <h3 className="font-display text-2xl font-bold text-maroon">
+                      {item.year} • {item.title}
+                    </h3>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed text-base">
+                  <p className="text-muted-foreground leading-relaxed text-base max-w-md mx-auto">
                     {item.desc}
                   </p>
                 </div>
@@ -143,31 +139,29 @@ function About() {
 
           {/* Sacred Venue Feature Card: Community Hall, Srungarapuram */}
           <ScrollReveal variant="fade-up">
-            <div className="glass-card p-8 sm:p-10 border-2 border-gold/40 relative overflow-hidden bg-gradient-to-br from-amber-500/10 via-background/80 to-red-500/10 shadow-lg">
+            <div className="glass-card p-8 sm:p-10 border-2 border-gold/40 relative overflow-hidden bg-gradient-to-br from-amber-500/10 via-background/80 to-red-500/10 shadow-lg text-center">
               <div className="absolute -right-6 -bottom-6 text-9xl opacity-10 select-none pointer-events-none">
                 🏛️
               </div>
-              <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 rounded-xl bg-primary text-primary-foreground shadow-md">
+              <div className="relative z-10 flex flex-col items-center">
+                <div className="flex flex-col items-center gap-2 mb-4">
+                  <div className="p-3.5 rounded-2xl bg-primary text-primary-foreground shadow-md inline-flex items-center justify-center mb-1">
                     <Sparkles className="h-6 w-6" />
                   </div>
-                  <div>
-                    <span className="text-xs uppercase tracking-wider text-primary font-bold">{t("venueSublabel")}</span>
-                    <h3 className="font-display text-2xl sm:text-3xl font-bold text-maroon">
-                      {t("venueCardTitle")}
-                    </h3>
-                  </div>
+                  <span className="text-xs uppercase tracking-wider text-primary font-bold">{t("venueSublabel")}</span>
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-maroon">
+                    {t("venueCardTitle")}
+                  </h3>
                 </div>
-                <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+                <p className="text-base sm:text-lg text-foreground/80 leading-relaxed max-w-2xl mx-auto">
                   {t("venueCardDesc")}
                 </p>
-                <div className="mt-4 pt-4 border-t border-border/60 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-1.5">
+                <div className="mt-6 pt-5 border-t border-border/60 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground w-full">
+                  <div className="flex items-center justify-center gap-1.5">
                     <Sun className="w-4 h-4 text-gold" />
                     <span><strong>19+</strong> Continuous Annual Celebrations</span>
                   </div>
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex items-center justify-center gap-1.5">
                     <Award className="w-4 h-4 text-gold" />
                     <span>Organized with Devotion by <strong>SRP Committee Kurrollu</strong></span>
                   </div>
@@ -182,25 +176,27 @@ function About() {
       <section className="bg-transparent py-16 relative z-10">
         <div className="mx-auto max-w-4xl px-4">
           <ScrollReveal variant="fade-up">
-            <div className="glass-card p-8 sm:p-12 relative overflow-hidden">
+            <div className="glass-card p-8 sm:p-12 relative overflow-hidden text-center">
               <div 
-                className="absolute top-0 right-0 text-9xl opacity-5"
+                className="absolute top-0 right-0 text-9xl opacity-5 pointer-events-none"
                 style={{ lineHeight: 1 }}
               >
                 🌺
               </div>
-              <div className="relative">
-                <div className="flex items-center gap-3 mb-6">
-                  <Sparkles className="h-8 w-8 text-primary" />
+              <div className="relative flex flex-col items-center">
+                <div className="flex flex-col items-center gap-3 mb-6">
+                  <div className="p-3 rounded-2xl bg-gold/10 border border-gold/20 text-primary inline-flex items-center justify-center">
+                    <Sparkles className="h-7 w-7" />
+                  </div>
                   <h2 className="font-display text-3xl sm:text-4xl font-bold text-maroon">
                     {t("whyWeCelebrate")}
                   </h2>
                 </div>
-                <div className="prose prose-lg max-w-none text-muted-foreground">
+                <div className="text-muted-foreground max-w-2xl mx-auto space-y-4">
                   <p className="text-lg leading-relaxed">
                     {t("whyWeCelebrateText1")}
                   </p>
-                  <p className="text-lg leading-relaxed mt-4">
+                  <p className="text-lg leading-relaxed">
                     {t("whyWeCelebrateText2")}
                   </p>
                 </div>
@@ -214,28 +210,30 @@ function About() {
       <section className="bg-transparent py-16 relative z-10">
         <div className="mx-auto max-w-4xl px-4">
           <ScrollReveal variant="fade-up">
-            <div className="glass-card p-8 sm:p-12 relative overflow-hidden">
+            <div className="glass-card p-8 sm:p-12 relative overflow-hidden text-center">
               <div 
-                className="absolute top-0 right-0 text-9xl opacity-5"
+                className="absolute top-0 right-0 text-9xl opacity-5 pointer-events-none"
                 style={{ lineHeight: 1 }}
               >
                 🙏
               </div>
-              <div className="relative">
-                <div className="flex items-center gap-3 mb-6">
-                  <Heart className="h-8 w-8 text-primary" />
+              <div className="relative flex flex-col items-center">
+                <div className="flex flex-col items-center gap-3 mb-6">
+                  <div className="p-3 rounded-2xl bg-gold/10 border border-gold/20 text-primary inline-flex items-center justify-center">
+                    <Heart className="h-7 w-7" />
+                  </div>
                   <h2 className="font-display text-3xl sm:text-4xl font-bold text-maroon">
                     {t("importance")}
                   </h2>
                 </div>
-                <div className="prose prose-lg max-w-none text-muted-foreground">
+                <div className="text-muted-foreground max-w-2xl mx-auto space-y-4">
                   <p className="text-lg leading-relaxed">
                     {t("importanceText1")}
                   </p>
-                  <p className="text-lg leading-relaxed mt-4">
+                  <p className="text-lg leading-relaxed">
                     {t("importanceText2")}
                   </p>
-                  <p className="text-lg leading-relaxed mt-4">
+                  <p className="text-lg leading-relaxed">
                     {t("importanceText3")}
                   </p>
                 </div>
@@ -249,46 +247,42 @@ function About() {
       <section className="bg-transparent py-16 relative z-10">
         <div className="mx-auto max-w-4xl px-4">
           <ScrollReveal variant="fade-up">
-            <div className="glass-card p-8 sm:p-12 relative overflow-hidden">
+            <div className="glass-card p-8 sm:p-12 relative overflow-hidden text-center">
               <div 
-                className="absolute top-0 right-0 text-9xl opacity-5"
+                className="absolute top-0 right-0 text-9xl opacity-5 pointer-events-none"
                 style={{ lineHeight: 1 }}
               >
                 🪔
               </div>
-              <div className="relative">
-                <div className="flex items-center gap-3 mb-6">
-                  <Flame className="h-8 w-8 text-primary" />
+              <div className="relative flex flex-col items-center">
+                <div className="flex flex-col items-center gap-3 mb-6">
+                  <div className="p-3 rounded-2xl bg-gold/10 border border-gold/20 text-primary inline-flex items-center justify-center">
+                    <Flame className="h-7 w-7" />
+                  </div>
                   <h2 className="font-display text-3xl sm:text-4xl font-bold text-maroon">
                     {t("ourTraditions")}
                   </h2>
                 </div>
-                <div className="prose prose-lg max-w-none text-muted-foreground">
-                  <p className="text-lg leading-relaxed">
+                <div className="text-muted-foreground max-w-2xl mx-auto">
+                  <p className="text-lg leading-relaxed mb-8">
                     {t("ourTraditionsText")}
                   </p>
                   
-                  <div className="mt-6 grid gap-4">
-                    <div className="flex gap-4 items-start">
-                      <div className="text-2xl">🎭</div>
-                      <div>
-                        <h4 className="font-semibold text-primary text-base mb-1">{t("culturalPrograms")}</h4>
-                        <p className="text-base">{t("culturalProgramsDesc")}</p>
-                      </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div className="flex flex-col items-center text-center p-5 rounded-2xl bg-background/60 border border-gold/25 shadow-sm hover:border-gold/60 transition-colors">
+                      <div className="text-3xl mb-2">🎭</div>
+                      <h4 className="font-semibold text-primary text-base mb-1">{t("culturalPrograms")}</h4>
+                      <p className="text-sm text-muted-foreground">{t("culturalProgramsDesc")}</p>
                     </div>
-                    <div className="flex gap-4 items-start">
-                      <div className="text-2xl">🕉️</div>
-                      <div>
-                        <h4 className="font-semibold text-primary text-base mb-1">{t("dailyRituals")}</h4>
-                        <p className="text-base">{t("dailyRitualsDesc")}</p>
-                      </div>
+                    <div className="flex flex-col items-center text-center p-5 rounded-2xl bg-background/60 border border-gold/25 shadow-sm hover:border-gold/60 transition-colors">
+                      <div className="text-3xl mb-2">🕉️</div>
+                      <h4 className="font-semibold text-primary text-base mb-1">{t("dailyRituals")}</h4>
+                      <p className="text-sm text-muted-foreground">{t("dailyRitualsDesc")}</p>
                     </div>
-                    <div className="flex gap-4 items-start">
-                      <div className="text-2xl">🌊</div>
-                      <div>
-                        <h4 className="font-semibold text-primary text-base mb-1">{t("visarjanCeremony")}</h4>
-                        <p className="text-base">{t("visarjanCeremonyDesc")}</p>
-                      </div>
+                    <div className="flex flex-col items-center text-center p-5 rounded-2xl bg-background/60 border border-gold/25 shadow-sm hover:border-gold/60 transition-colors">
+                      <div className="text-3xl mb-2">🌊</div>
+                      <h4 className="font-semibold text-primary text-base mb-1">{t("visarjanCeremony")}</h4>
+                      <p className="text-sm text-muted-foreground">{t("visarjanCeremonyDesc")}</p>
                     </div>
                   </div>
                 </div>
@@ -302,21 +296,23 @@ function About() {
       <section className="bg-transparent py-16 relative z-10">
         <div className="mx-auto max-w-4xl px-4">
           <ScrollReveal variant="fade-up">
-            <div className="glass-card p-8 sm:p-12">
-              <div className="flex items-center gap-3 mb-6">
-                <Users className="h-8 w-8 text-primary" />
+            <div className="glass-card p-8 sm:p-12 text-center">
+              <div className="flex flex-col items-center gap-3 mb-6">
+                <div className="p-3 rounded-2xl bg-gold/10 border border-gold/20 text-primary inline-flex items-center justify-center">
+                  <Users className="h-7 w-7" />
+                </div>
                 <h2 className="font-display text-3xl sm:text-4xl font-bold text-maroon">
                   {t("ourStory")}
                 </h2>
               </div>
-              <div className="prose prose-lg max-w-none text-muted-foreground">
+              <div className="text-muted-foreground max-w-2xl mx-auto space-y-4">
                 <p className="text-lg leading-relaxed">
                   {t("ourStoryText1")}
                 </p>
-                <p className="text-lg leading-relaxed mt-4">
+                <p className="text-lg leading-relaxed">
                   {t("ourStoryText2")}
                 </p>
-                <p className="text-lg leading-relaxed mt-4">
+                <p className="text-lg leading-relaxed">
                   {t("ourStoryText3")}
                 </p>
               </div>
