@@ -21,6 +21,7 @@ import photo20 from "@/assets/Parisa SUMANTH.png";
 import photo21 from "@/assets/Penumaka lokesh.png";
 import photo22 from "@/assets/VALLURI MAHESH BABU.png";
 import photo23 from "@/assets/Nuthakki Purna.png";
+import photo24 from "@/assets/Parisa srinivasa rao.png";
 
 export interface CommitteeMember {
   id: number;
@@ -74,6 +75,18 @@ export const committeeMembers: CommitteeMember[] = [
   },
   {
     id: 4,
+    name: "Srinivasa Rao Parisa",
+    nameTe: "శ్రీనివాస రావు పరిస",
+    firstName: "SRINIVASA RAO",
+    lastName: "PARISA",
+    role: "Volunteer",
+    roleTe: "వాలంటీర్",
+    photo: photo24,
+    bio: "Dedicated active member of SRP Committee Kurrollu.",
+    bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
+  },
+  {
+    id: 5,
     name: "Srinu Parisa",
     nameTe: "శ్రీను పరిస",
     firstName: "SRINU",
@@ -85,7 +98,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 5,
+    id: 6,
     name: "Sai Gantasala",
     nameTe: "సాయి గంటసాల",
     firstName: "SAI",
@@ -97,7 +110,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 6,
+    id: 7,
     name: "Yogeshwar Palagani",
     nameTe: "యోగేశ్వర్ పాలగాని",
     firstName: "YOGESHWAR",
@@ -109,7 +122,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 7,
+    id: 8,
     name: "Sudheer Yarlagadda",
     nameTe: "సుధీర్ యార్లగడ్డ",
     firstName: "SUDHEER",
@@ -121,7 +134,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 8,
+    id: 9,
     name: "Manoj Penumaka",
     nameTe: "మనోజ్ పెనుమాక",
     firstName: "MANOJ",
@@ -133,7 +146,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 9,
+    id: 10,
     name: "Madhu Sai Ram Naragani",
     nameTe: "మధు సాయిరామ్ నారగాని",
     firstName: "MADHU SAI RAM",
@@ -145,7 +158,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 10,
+    id: 11,
     name: "Ganesh Gantasala",
     nameTe: "గణేష్ గంటసాల",
     firstName: "GANESH",
@@ -157,7 +170,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 11,
+    id: 12,
     name: "Mahesh Nutakki",
     nameTe: "మహేష్ నూతక్కి",
     firstName: "MAHESH",
@@ -169,7 +182,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 12,
+    id: 13,
     name: "Sai Mani Kolluru",
     nameTe: "సాయి మణి కొల్లూరు",
     firstName: "SAI MANI",
@@ -181,7 +194,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 13,
+    id: 14,
     name: "Venkata Siva Kolluru",
     nameTe: "వెంకట శివ కొల్లూరు",
     firstName: "VENKATA SIVA",
@@ -193,7 +206,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 14,
+    id: 15,
     name: "Gopi Parisa",
     nameTe: "గోపి పరిస",
     firstName: "GOPI",
@@ -205,7 +218,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 15,
+    id: 16,
     name: "Harsha Vardhan Sai Relangi",
     nameTe: "హర్ష వర్ధన్ సాయి రేలంగి",
     firstName: "HARSHA VARDHAN",
@@ -217,7 +230,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 16,
+    id: 17,
     name: "Ravi Vardhan Thulluru",
     nameTe: "రవి వర్ధన్ తుళ్ళూరు",
     firstName: "RAVI VARDHAN",
@@ -229,7 +242,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 17,
+    id: 18,
     name: "Vamsi Lankothu",
     nameTe: "వంశీ లంకోతు",
     firstName: "VAMSI",
@@ -241,7 +254,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 18,
+    id: 19,
     name: "Yaswanth Vuyyuru",
     nameTe: "యశ్వంత్ వుయ్యూరు",
     firstName: "YASWANTH",
@@ -253,7 +266,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 19,
+    id: 20,
     name: "Chakrapani Palagani",
     nameTe: "చక్రపాణి పాలగాని",
     firstName: "CHAKRAPANI",
@@ -265,7 +278,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 20,
+    id: 21,
     name: "Lokesh Penumaka",
     nameTe: "లోకేష్ పెనుమాక",
     firstName: "LOKESH",
@@ -277,7 +290,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 21,
+    id: 22,
     name: "Chandu Vaka",
     nameTe: "చందు వాక",
     firstName: "CHANDU",
@@ -289,7 +302,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 22,
+    id: 23,
     name: "Mahesh Babu Valluri",
     nameTe: "మహేష్ బాబు వల్లూరి",
     firstName: "MAHESH BABU",
@@ -301,7 +314,7 @@ export const committeeMembers: CommitteeMember[] = [
     bioTe: "SRP కమిటీ కుర్రోళ్ళలో చురుకైన వాలంటీర్.",
   },
   {
-    id: 23,
+    id: 24,
     name: "Purna Nuthakki",
     nameTe: "పూర్ణ నూతక్కి",
     firstName: "PURNA",
