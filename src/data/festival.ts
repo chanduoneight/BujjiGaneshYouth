@@ -47,7 +47,7 @@ export const contact = {
     te: "కమ్యూనిటీ హాల్, శృంగారాపురం గ్రామం, దుగ్గిరాల మండలం, గుంటూరు జిల్లా - 522305",
   } as Bilingual,
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Community+Hall+Srungarapuram+Duggirala+Guntur",
-  instagram: "https://instagram.com/",
+  instagram: "https://www.instagram.com/team_bujji_ganesh_srp?stkn=aTVyamEwbDlhNXN6",
   facebook: "https://facebook.com/",
   youtube: "https://youtube.com/",
 };
